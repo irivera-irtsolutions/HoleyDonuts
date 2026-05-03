@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["claude/deploy-initial-site-wJZ9a"]
+    branches: ["main", "claude/deploy-initial-site-wJZ9a"]
   workflow_dispatch:
 
 permissions:
