@@ -3,7 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donut Palace & Holey Donuts</title>
+  <title>Holey Donuts | Fresh Handmade Donuts in Denton, TX</title>
+  <meta name="description" content="Holey Donuts in Denton, TX — fresh handmade donuts, kolaches, and breakfast items every morning. Order on Uber Eats or DoorDash, or visit us at 5050 Teasley Ln #112, Denton TX 76210.">
+  <meta name="keywords" content="donuts Denton TX, donut shop Denton, fresh donuts Denton Texas, kolaches Denton, breakfast Denton TX, Holey Donuts, donuts near me, donut delivery Denton">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://holeydonutsdenton.com">
+
+  <!-- Open Graph (Facebook, iMessage previews) -->
+  <meta property="og:type"        content="restaurant">
+  <meta property="og:title"       content="Holey Donuts | Fresh Handmade Donuts in Denton, TX">
+  <meta property="og:description" content="Fresh handmade donuts, kolaches & breakfast every morning. Visit us at 5050 Teasley Ln #112, Denton TX or order delivery on Uber Eats & DoorDash.">
+  <meta property="og:url"         content="https://holeydonutsdenton.com">
+  <meta property="og:locale"      content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="Holey Donuts | Fresh Handmade Donuts in Denton, TX">
+  <meta name="twitter:description" content="Fresh handmade donuts, kolaches & breakfast every morning in Denton, TX.">
+
+  <!-- Local Business Schema (tells Google this is a real local business) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Holey Donuts",
+    "description": "Fresh handmade donuts, kolaches, and breakfast items made every morning in Denton, TX.",
+    "url": "https://holeydonutsdenton.com",
+    "telephone": "+19402437095",
+    "priceRange": "$",
+    "servesCuisine": ["Donuts", "Kolaches", "Breakfast"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5050 Teasley Ln #112",
+      "addressLocality": "Denton",
+      "addressRegion": "TX",
+      "postalCode": "76210",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.143945,
+      "longitude": -97.105807
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "05:30",
+        "closes": "12:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday","Sunday"],
+        "opens": "06:00",
+        "closes": "12:00"
+      }
+    ],
+    "hasMap": "https://www.google.com/maps/place/5050+Teasley+Ln+%23112,+Denton,+TX+76210",
+    "sameAs": [
+      "https://www.doordash.com/store/holey-donuts-denton-656567/",
+      "https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <style>
@@ -190,6 +253,11 @@
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1.25rem; max-width: 1100px; margin: 0 auto;
     }
+    .menu-section-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.3rem; color: var(--brown);
+      max-width: 1100px; margin: 0 auto 1.25rem;
+    }
     .mcard {
       background: var(--card); border: 1.5px dashed var(--border);
       border-radius: 0.75rem; padding: 1.35rem; position: relative;
@@ -250,6 +318,23 @@
     .info-val { font-size: 0.88rem; line-height: 1.55; }
     .lcard-foot { padding: 0 1.75rem 1.5rem; }
 
+    /* ── CATERING ── */
+    .catering-box {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      background: var(--warm); border: 1.5px dashed var(--caramel);
+      border-radius: 0.75rem; padding: 1.75rem;
+      max-width: 800px; margin: 0 auto 3rem;
+    }
+    .catering-emoji { font-size: 2rem; flex-shrink: 0; }
+    .catering-title {
+      font-family: 'Pacifico', cursive; font-size: 1.2rem;
+      color: var(--brown); margin-bottom: 0.5rem;
+    }
+    .catering-text {
+      font-size: 0.9rem; font-style: italic;
+      color: var(--muted); line-height: 1.65;
+    }
+
     /* ── ORDER ── */
     #order { background: var(--cream); }
     .order-sub {
@@ -306,7 +391,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-brand">Donut Palace <span class="amp">&</span> Holey Donuts</div>
+  <div class="nav-brand">Holey Donuts</div>
   <ul class="nav-links">
     <li><a href="#about"     class="t" data-en="Our Story"     data-ko="우리 이야기">Our Story</a></li>
     <li><a href="#menu"      class="t" data-en="Menu"          data-ko="메뉴">Menu</a></li>
@@ -321,15 +406,14 @@
 <!-- HERO -->
 <section id="hero">
   <span class="hero-donut">🍩</span>
-  <p class="hero-eyebrow t" data-en="Handmade with love since day one" data-ko="처음부터 정성껏, 사랑을 담아">Handmade with love since day one</p>
+  <p class="hero-eyebrow t" data-en="Denton's favorite donut shop since day one" data-ko="처음부터 덴턴이 사랑한 도넛 가게">Denton's favorite donut shop since day one</p>
   <h1 class="hero-title t" data-en="Everyday <span class='rose'>Sweetness</span>" data-ko="일상의 <span class='rose'>달콤함</span>">Everyday <span class="rose">Sweetness</span></h1>
   <p class="hero-sub t"
-     data-en="Two cozy neighborhood shops. Fresh donuts every single morning. Come as you are."
-     data-ko="두 개의 아늑한 동네 가게. 매일 아침 신선한 도넛. 편하게 들러 주세요.">
-    Two cozy neighborhood shops. Fresh donuts every single morning. Come as you are.
+     data-en="Your cozy neighborhood donut shop in Denton, TX. Fresh donuts every single morning. Come as you are."
+     data-ko="덴턴 텍사스의 아늑한 동네 도넛 가게. 매일 아침 신선한 도넛. 편하게 들러 주세요.">
+    Your cozy neighborhood donut shop in Denton, TX. Fresh donuts every single morning. Come as you are.
   </p>
   <div class="hero-stores">
-    <div class="store-tag">📍 Donut Palace</div>
     <div class="store-tag">📍 Holey Donuts</div>
   </div>
   <div class="hero-btns">
@@ -354,14 +438,14 @@
   <div class="about-inner">
     <div class="about-photo">😊</div>
     <p class="about-text t"
-       data-en="We started with one fryer, a handful of recipes, and a dream to make the neighborhood a little sweeter. Years later, we've grown to two shops — but every donut is still made by hand, every single morning, just like it's always been. We know our regulars by name, and we hope to know yours too."
-       data-ko="우리는 튀김기 하나, 몇 가지 레시피, 그리고 동네를 조금 더 달콤하게 만들겠다는 꿈으로 시작했습니다. 두 개의 가게로 성장했지만, 모든 도넛은 여전히 매일 아침 손으로 직접 만들어집니다. 단골손님들의 이름을 다 알고, 여러분의 이름도 알고 싶습니다.">
-      We started with one fryer, a handful of recipes, and a dream to make the neighborhood a little sweeter. Years later, we've grown to two shops — but every donut is still made by hand, every single morning, just like it's always been. We know our regulars by name, and we hope to know yours too.
+       data-en="We started with one fryer, a handful of recipes, and a dream to make the neighborhood a little sweeter. Every donut is still made by hand, every single morning, just like it's always been. We know our regulars by name, and we hope to know yours too."
+       data-ko="우리는 튀김기 하나, 몇 가지 레시피, 그리고 동네를 조금 더 달콤하게 만들겠다는 꿈으로 시작했습니다. 모든 도넛은 여전히 매일 아침 손으로 직접 만들어집니다. 단골손님들의 이름을 다 알고, 여러분의 이름도 알고 싶습니다.">
+      We started with one fryer, a handful of recipes, and a dream to make the neighborhood a little sweeter. Every donut is still made by hand, every single morning, just like it's always been. We know our regulars by name, and we hope to know yours too.
     </p>
     <div class="about-sig t"
-         data-en="— Your Friends at Donut Palace &amp; Holey Donuts"
-         data-ko="— 도넛 팰리스 &amp; 홀리 도넛 드림">
-      — Your Friends at Donut Palace &amp; Holey Donuts
+         data-en="— Your Friends at Holey Donuts"
+         data-ko="— 홀리 도넛 드림">
+      — Your Friends at Holey Donuts
     </div>
   </div>
 </section>
@@ -371,58 +455,15 @@
   <p class="sec-eyebrow t" data-en="Made fresh every morning" data-ko="매일 아침 신선하게">Made fresh every morning</p>
   <h2 class="sec-title t" data-en="Our Menu" data-ko="저희 메뉴">Our Menu</h2>
   <div class="sec-divider">✦</div>
-  <div class="tabs">
-    <button class="tab active" id="tab-palace" onclick="switchTab('palace')">🏰 Donut Palace</button>
-    <button class="tab"        id="tab-holey"  onclick="switchTab('holey')">🍩 Holey Donuts</button>
-  </div>
-  <div class="menu-panel active" id="panel-palace"><div class="menu-grid" id="grid-palace"></div></div>
-  <div class="menu-panel"        id="panel-holey" ><div class="menu-grid" id="grid-holey"></div></div>
+  <div class="menu-grid" id="grid-holey"></div>
 </section>
 
 <!-- LOCATIONS -->
 <section id="locations">
   <p class="sec-eyebrow t" data-en="Come see us" data-ko="방문해 주세요">Come see us</p>
-  <h2 class="sec-title t" data-en="Our Locations" data-ko="매장 위치">Our Locations</h2>
+  <h2 class="sec-title t" data-en="Our Location" data-ko="매장 위치">Our Location</h2>
   <div class="sec-divider">📍</div>
-  <div class="loc-grid">
-
-    <div class="lcard">
-      <div class="lcard-head">
-        <div class="lcard-store">Donut Palace</div>
-        <div class="lcard-tagline t" data-en="Where regulars become family" data-ko="단골이 가족이 되는 곳">Where regulars become family</div>
-      </div>
-      <div class="lcard-body">
-        <div class="info-row">
-          <div class="info-icon">📍</div>
-          <div>
-            <div class="info-label t" data-en="Address" data-ko="주소">Address</div>
-            <div class="info-val">123 Main Street<br>Your City, ST 00000</div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">🕐</div>
-          <div>
-            <div class="info-label t" data-en="Hours" data-ko="영업시간">Hours</div>
-            <div class="info-val t"
-                 data-en="Mon–Fri: 6am – 7pm<br>Sat–Sun: 7am – 8pm"
-                 data-ko="월–금: 오전 6시 – 오후 7시<br>토–일: 오전 7시 – 오후 8시">
-              Mon–Fri: 6am – 7pm<br>Sat–Sun: 7am – 8pm
-            </div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">📞</div>
-          <div>
-            <div class="info-label t" data-en="Phone" data-ko="전화번호">Phone</div>
-            <div class="info-val">(555) 123-4567</div>
-          </div>
-        </div>
-      </div>
-      <div class="lcard-foot">
-        <a href="https://maps.google.com" target="_blank" class="btn btn-warm t"
-           data-en="Get Directions" data-ko="길 찾기">Get Directions</a>
-      </div>
-    </div>
+  <div class="loc-grid" style="max-width:460px;">
 
     <div class="lcard">
       <div class="lcard-head rose-head">
@@ -434,7 +475,7 @@
           <div class="info-icon">📍</div>
           <div>
             <div class="info-label t" data-en="Address" data-ko="주소">Address</div>
-            <div class="info-val">456 Oak Avenue<br>Your City, ST 00000</div>
+            <div class="info-val">5050 Teasley Ln #112<br>Denton, TX 76210</div>
           </div>
         </div>
         <div class="info-row">
@@ -442,9 +483,9 @@
           <div>
             <div class="info-label t" data-en="Hours" data-ko="영업시간">Hours</div>
             <div class="info-val t"
-                 data-en="Mon–Fri: 6am – 6pm<br>Sat–Sun: 7am – 9pm"
-                 data-ko="월–금: 오전 6시 – 오후 6시<br>토–일: 오전 7시 – 오후 9시">
-              Mon–Fri: 6am – 6pm<br>Sat–Sun: 7am – 9pm
+                 data-en="Mon–Fri: 5:30am – 12pm<br>Sat–Sun: 6:00am – 12pm"
+                 data-ko="월–금: 오전 5시 30분 – 낮 12시<br>토–일: 오전 6시 – 낮 12시">
+              Mon–Fri: 5:30am – 12pm<br>Sat–Sun: 6:00am – 12pm
             </div>
           </div>
         </div>
@@ -452,12 +493,12 @@
           <div class="info-icon">📞</div>
           <div>
             <div class="info-label t" data-en="Phone" data-ko="전화번호">Phone</div>
-            <div class="info-val">(555) 987-6543</div>
+            <div class="info-val">(940) 243-7095</div>
           </div>
         </div>
       </div>
       <div class="lcard-foot">
-        <a href="https://maps.google.com" target="_blank" class="btn btn-warm t"
+        <a href="https://www.google.com/maps/place/5050+Teasley+Ln+%23112,+Denton,+TX+76210" target="_blank" class="btn btn-warm t"
            data-en="Get Directions" data-ko="길 찾기">Get Directions</a>
       </div>
     </div>
@@ -475,19 +516,27 @@
      data-ko="우버이츠와 도어대시로 신선한 도넛을 문 앞까지 배달해 드립니다.">
     We're on Uber Eats and DoorDash — fresh donuts right to your door.
   </p>
-  <div class="order-grid">
-    <div class="ocard">
-      <div class="ocard-name">🏰 Donut Palace</div>
-      <div class="order-btns">
-        <a href="#" class="btn-ue"><span class="t" data-en="Order on Uber Eats"  data-ko="우버이츠로 주문">Order on Uber Eats</span></a>
-        <a href="#" class="btn-dd"><span class="t" data-en="Order on DoorDash"   data-ko="도어대시로 주문">Order on DoorDash</span></a>
-      </div>
+
+  <div class="catering-box">
+    <div class="catering-emoji">📞</div>
+    <div>
+      <div class="catering-title t" data-en="Catering & Large Orders" data-ko="케이터링 및 대량 주문">Catering & Large Orders</div>
+      <p class="catering-text t"
+         data-en="Planning an event, office breakfast, or party? We'd love to help. Call us to place large orders and we'll make sure everything is fresh and ready for you."
+         data-ko="이벤트, 오피스 아침 식사, 또는 파티를 계획 중이신가요? 기꺼이 도와드리겠습니다. 대량 주문은 전화로 문의해 주세요.">
+        Planning an event, office breakfast, or party? We'd love to help. Call us to place large orders and we'll make sure everything is fresh and ready for you.
+      </p>
+      <a href="tel:9402437095" class="btn btn-warm" style="margin-top:0.85rem;display:inline-block;">
+        📞 <span class="t" data-en="Call (940) 243-7095" data-ko="전화 (940) 243-7095">Call (940) 243-7095</span>
+      </a>
     </div>
+  </div>
+  <div class="order-grid" style="max-width:400px;">
     <div class="ocard">
       <div class="ocard-name">🍩 Holey Donuts</div>
       <div class="order-btns">
-        <a href="#" class="btn-ue"><span class="t" data-en="Order on Uber Eats"  data-ko="우버이츠로 주문">Order on Uber Eats</span></a>
-        <a href="#" class="btn-dd"><span class="t" data-en="Order on DoorDash"   data-ko="도어대시로 주문">Order on DoorDash</span></a>
+        <a href="https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg" target="_blank" class="btn-ue"><span class="t" data-en="Order on Uber Eats" data-ko="우버이츠로 주문">Order on Uber Eats</span></a>
+        <a href="https://www.doordash.com/store/holey-donuts-denton-656567/" target="_blank" class="btn-dd"><span class="t" data-en="Order on DoorDash" data-ko="도어대시로 주문">Order on DoorDash</span></a>
       </div>
     </div>
   </div>
@@ -495,7 +544,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="foot-brand">Donut Palace & Holey Donuts</div>
+  <div class="foot-brand">Holey Donuts</div>
   <p class="foot-note t"
      data-en="Made with 🍩 & love. Come visit us soon."
      data-ko="🍩와 사랑으로 만들었습니다. 곧 방문해 주세요.">
@@ -505,99 +554,179 @@
 
 <script>
   // ═══════════════════════════════════════════════════════
-  //  MENU DATA — this is the only part you need to edit
-  //  to update items, prices, or descriptions.
-  //
-  //  To change a price:   find the item, edit the price field
-  //  To rename an item:   edit the en and ko fields
-  //  To add a new item:   copy any { ... } block, paste at the
-  //                       end of the array (before the ] ), fill in
-  //  To remove an item:   delete its { ... } block
-  //  To remove a badge:   delete the badge and badgeKo lines
+  //  MENU DATA — organized by section
+  //  Each section: { titleEn, titleKo, items: [...] }
+  //  Each item: { emoji, en, ko, descEn, descKo, badge?, badgeKo? }
   // ═══════════════════════════════════════════════════════
 
-  const MENU_DATA = {
-
-    palace: [
-      { emoji:"🍩", en:"Classic Glazed",    ko:"클래식 글레이즈",  price:"$2.50",
-        descEn:"Our signature ring — perfectly balanced sweetness with a glossy vanilla glaze.",
-        descKo:"완벽한 단맛의 바닐라 글레이즈 시그니처 도넛." },
-
-      { emoji:"🍓", en:"Strawberry Frosted", ko:"딸기 프로스트",    price:"$3.00",
-        descEn:"Fluffy yeast donut topped with real strawberry icing and rainbow sprinkles.",
-        descKo:"리얼 딸기 아이싱과 스프링클로 장식한 폭신한 이스트 도넛." },
-
-      { emoji:"🍫", en:"Chocolate Dream",    ko:"초콜릿 드림",      price:"$3.00",
-        descEn:"Rich chocolate frosting on an airy raised donut. A classic done right.",
-        descKo:"부드러운 도넛에 진한 초콜릿 프로스팅. 클래식의 완성." },
-
-      { emoji:"🥓", en:"Maple Bacon",        ko:"메이플 베이컨",    price:"$3.50",
-        descEn:"Sweet meets savory — maple glaze drizzled over crispy bacon crumbles.",
-        descKo:"단맛과 짭짤함의 만남 — 바삭한 베이컨 위에 메이플 글레이즈." },
-
-      { emoji:"✨", en:"Cinnamon Sugar",      ko:"시나몬 슈가",      price:"$2.75",
-        descEn:"Old-fashioned cake donut rolled generously in a cinnamon-sugar cloud.",
-        descKo:"시나몬 슈가를 듬뿍 입힌 올드패션 케이크 도넛." },
-
-      { emoji:"🫐", en:"Blueberry Cake",     ko:"블루베리 케이크",  price:"$3.00",
-        descEn:"Dense, moist cake donut bursting with real blueberry flavor.",
-        descKo:"리얼 블루베리가 가득한 촉촉한 케이크 도넛." },
-
-      { emoji:"👑", en:"Palace Crown",        ko:"팰리스 크라운",    price:"$4.50",
-        badge:"Exclusive", badgeKo:"단독",
-        descEn:"Cream-filled, dusted with edible gold, topped with fresh berries.",
-        descKo:"크림 필드에 식용 금박과 생베리로 장식한 스페셜 메뉴." },
-
-      { emoji:"💜", en:"Royal Cream Puff",   ko:"로얄 크림 퍼프",   price:"$4.00",
-        badge:"Palace Only", badgeKo:"팰리스 전용",
-        descEn:"Bavarian cream-filled donut with a gorgeous purple taro drizzle.",
-        descKo:"바바리안 크림이 가득하고 타로 드리즐로 마무리한 도넛." },
-    ],
-
-    holey: [
-      { emoji:"🍩", en:"Classic Glazed",    ko:"클래식 글레이즈",  price:"$2.50",
-        descEn:"Our signature ring — perfectly balanced sweetness with a glossy vanilla glaze.",
-        descKo:"완벽한 단맛의 바닐라 글레이즈 시그니처 도넛." },
-
-      { emoji:"🍓", en:"Strawberry Frosted", ko:"딸기 프로스트",    price:"$3.00",
-        descEn:"Fluffy yeast donut topped with real strawberry icing and rainbow sprinkles.",
-        descKo:"리얼 딸기 아이싱과 스프링클로 장식한 폭신한 이스트 도넛." },
-
-      { emoji:"🍫", en:"Chocolate Dream",    ko:"초콜릿 드림",      price:"$3.00",
-        descEn:"Rich chocolate frosting on an airy raised donut. A classic done right.",
-        descKo:"부드러운 도넛에 진한 초콜릿 프로스팅. 클래식의 완성." },
-
-      { emoji:"🥓", en:"Maple Bacon",        ko:"메이플 베이컨",    price:"$3.50",
-        descEn:"Sweet meets savory — maple glaze drizzled over crispy bacon crumbles.",
-        descKo:"단맛과 짭짤함의 만남 — 바삭한 베이컨 위에 메이플 글레이즈." },
-
-      { emoji:"✨", en:"Cinnamon Sugar",      ko:"시나몬 슈가",      price:"$2.75",
-        descEn:"Old-fashioned cake donut rolled generously in a cinnamon-sugar cloud.",
-        descKo:"시나몬 슈가를 듬뿍 입힌 올드패션 케이크 도넛." },
-
-      { emoji:"🫐", en:"Blueberry Cake",     ko:"블루베리 케이크",  price:"$3.00",
-        descEn:"Dense, moist cake donut bursting with real blueberry flavor.",
-        descKo:"리얼 블루베리가 가득한 촉촉한 케이크 도넛." },
-
-      { emoji:"🍵", en:"Matcha Swirl",        ko:"말차 스월",        price:"$3.75",
-        badge:"Holey Only", badgeKo:"홀리 전용",
-        descEn:"Ceremonial-grade matcha glaze swirled with white chocolate. A Holey original.",
-        descKo:"화이트 초콜릿과 어우러진 고급 말차 글레이즈. 홀리 오리지널." },
-
-      { emoji:"💜", en:"Ube Glazed",          ko:"우베 글레이즈",    price:"$3.75",
-        badge:"Holey Only", badgeKo:"홀리 전용",
-        descEn:"Vibrant purple ube glaze on a soft raised ring. Sweet, earthy, unforgettable.",
-        descKo:"부드러운 도넛에 선명한 보라빛 우베 글레이즈. 달콤하고 고소한 특별함." },
-    ]
-  };
+  const MENU_DATA = [
+    {
+      titleEn: "🍩 Donuts",
+      titleKo: "🍩 도넛",
+      items: [
+        { emoji:"🍩", en:"Glazed",                ko:"글레이즈",
+          descEn:"Classic raised glazed donut — a timeless original.",
+          descKo:"클래식 글레이즈 도넛 — 변함없는 오리지널." },
+        { emoji:"🍫", en:"Chocolate",              ko:"초콜릿",
+          descEn:"Classic chocolate iced donut.",
+          descKo:"클래식 초콜릿 아이싱 도넛." },
+        { emoji:"🍫✨", en:"Chocolate Sprinkles",  ko:"초콜릿 스프링클",
+          descEn:"Classic chocolate iced donut splashed with rainbow sprinkles.",
+          descKo:"초콜릿 아이싱에 스프링클을 뿌린 도넛." },
+        { emoji:"🍓", en:"Pink Lady",              ko:"핑크 레이디",
+          descEn:"Raised donut with strawberry icing and sprinkles.",
+          descKo:"딸기 아이싱과 스프링클을 올린 도넛." },
+        { emoji:"🎂", en:"Birthday Cake",          ko:"생일 케이크",
+          descEn:"Raised donut with white icing and colorful sprinkles.",
+          descKo:"흰 아이싱과 알록달록 스프링클로 장식한 도넛." },
+        { emoji:"🍬", en:"Cotton Candy",           ko:"솜사탕",
+          descEn:"Raised donut with berry blue icing and sprinkles.",
+          descKo:"베리 블루 아이싱과 스프링클을 올린 도넛." },
+        { emoji:"🥥", en:"White Coconut",          ko:"화이트 코코넛",
+          descEn:"Raised donut with white icing and shaved coconut.",
+          descKo:"흰 아이싱과 코코넛 슬라이스를 올린 도넛." },
+        { emoji:"🥣", en:"Cereal Donut",           ko:"시리얼 도넛",
+          descEn:"Raised donut with white icing topped with Fruity Pebbles cereal.",
+          descKo:"흰 아이싱 위에 과일 시리얼을 올린 도넛." },
+        { emoji:"✨", en:"Glazed Old Fashioned",   ko:"글레이즈 올드패션",
+          descEn:"Cake donut fried and cracked open, then glazed.",
+          descKo:"튀겨서 갈라진 케이크 도넛에 글레이즈를 입힌 것." },
+        { emoji:"🍂", en:"Cinnamon Old Fashioned", ko:"시나몬 올드패션",
+          descEn:"Cake donut cracked open, dusted with cinnamon, then glazed.",
+          descKo:"시나몬을 뿌리고 글레이즈를 입힌 올드패션 도넛." },
+        { emoji:"🍫", en:"Chocolate Old Fashioned",ko:"초콜릿 올드패션",
+          descEn:"Cake donut fried and cracked open, then dipped in chocolate.",
+          descKo:"초콜릿에 담근 올드패션 케이크 도넛." },
+        { emoji:"🍁", en:"Maple Bar",              ko:"메이플 바",
+          descEn:"Long john with sweet maple icing.",
+          descKo:"메이플 아이싱을 올린 롱 존 도넛." },
+        { emoji:"🍫", en:"Éclair",                 ko:"에클레어",
+          descEn:"Long john dipped in chocolate.",
+          descKo:"초콜릿에 담근 롱 존 도넛." },
+        { emoji:"🥐", en:"Cronut",                 ko:"크로넛",
+          descEn:"A flaky croissant-donut hybrid in chocolate, glazed, or cinnamon sugar.",
+          descKo:"초콜릿, 글레이즈, 또는 시나몬 슈가 크루아상-도넛 하이브리드." },
+        { emoji:"🫐", en:"Filled Donuts",          ko:"필드 도넛",
+          descEn:"Round glazed donuts filled with raspberry, Bavarian cream, or lemon.",
+          descKo:"라즈베리, 바바리안 크림, 또는 레몬이 가득 찬 글레이즈 도넛." },
+        { emoji:"🍩", en:"Donut Holes",            ko:"도넛 홀",
+          descEn:"Sweet and fluffy little balls of joy.",
+          descKo:"달콤하고 폭신한 작은 도넛 조각." },
+        { emoji:"🍫", en:"Chocolate Donut Holes",  ko:"초콜릿 도넛 홀",
+          descEn:"Donut holes dipped in chocolate — 4 clusters of 3.",
+          descKo:"초콜릿에 담근 도넛 홀 — 3개씩 4묶음." },
+        { emoji:"🥓", en:"Maple Bacon",            ko:"메이플 베이컨",
+          badge:"Sat & Sun Only", badgeKo:"토·일 한정",
+          descEn:"Maple bar topped with 2 strips of crispy bacon.",
+          descKo:"바삭한 베이컨 2줄을 올린 메이플 바." },
+      ]
+    },
+    {
+      titleEn: "🌶️ Savory",
+      titleKo: "🌶️ 세이보리",
+      items: [
+        { emoji:"🌭", en:"Little Piggies (Kolaches)", ko:"리틀 피기 (콜라체)",
+          descEn:"Smoky cheesy sausage links wrapped in delicious donut dough, baked to perfection.",
+          descKo:"훈제 치즈 소시지를 도넛 반죽으로 감싸 구운 것." },
+        { emoji:"🧀", en:"Jumbo Cheddar",           ko:"점보 체다",
+          descEn:"Big cheddar sausage wrapped in donut dough, baked golden brown.",
+          descKo:"큼직한 체다 소시지를 도넛 반죽으로 감싸 황금빛으로 구운 것." },
+        { emoji:"🌶️", en:"Jalapeño Cheddar",        ko:"할라피뇨 체다",
+          descEn:"Big jalapeño cheddar sausage wrapped in donut dough, baked golden brown.",
+          descKo:"할라피뇨 체다 소시지를 도넛 반죽으로 감싸 구운 것." },
+        { emoji:"🥐", en:"Croissant Piggy",         ko:"크루아상 피기",
+          descEn:"The little piggy, but wrapped in a buttery flaky croissant.",
+          descKo:"버터 크루아상으로 감싼 피기." },
+        { emoji:"🥐", en:"Jalapeño Croissant",      ko:"할라피뇨 크루아상",
+          descEn:"Jalapeño cheddar sausage wrapped in a buttery flaky croissant.",
+          descKo:"할라피뇨 체다 소시지를 버터 크루아상으로 감싼 것." },
+        { emoji:"🥐", en:"Ham & Cheese Croissant",  ko:"햄 치즈 크루아상",
+          descEn:"Ham and American cheese wrapped in a buttery flaky croissant.",
+          descKo:"햄과 아메리칸 치즈를 버터 크루아상으로 감싼 것." },
+        { emoji:"🌯", en:"Breakfast Burrito",        ko:"브렉퍼스트 부리또",
+          descEn:"Made in house! Bacon, sausage, egg and cheese in a warm flour tortilla.",
+          descKo:"직접 만든 브리또! 베이컨, 소시지, 달걀, 치즈를 따뜻한 또띠야에." },
+      ]
+    },
+    {
+      titleEn: "📦 Value Packs",
+      titleKo: "📦 대용량 패키지",
+      items: [
+        { emoji:"🍩", en:"Dozen Glazed",            ko:"글레이즈 12개",
+          descEn:"A box of 12 glazed donuts.",
+          descKo:"글레이즈 도넛 12개 박스." },
+        { emoji:"🍫", en:"Dozen Chocolate",         ko:"초콜릿 12개",
+          descEn:"A box of 12 chocolate donuts.",
+          descKo:"초콜릿 도넛 12개 박스." },
+        { emoji:"🔀", en:"Dozen Half & Half",       ko:"반반 12개",
+          descEn:"6 glazed and 6 chocolate donuts.",
+          descKo:"글레이즈 6개 + 초콜릿 6개." },
+        { emoji:"🎉", en:"Dozen Mixed",             ko:"믹스 12개",
+          descEn:"3 glazed, 3 chocolate, and a mix of cake, colors, sprinkles & minis.",
+          descKo:"글레이즈 3개, 초콜릿 3개, 그리고 케이크·컬러·스프링클 믹스." },
+        { emoji:"🌭", en:"Dozen Piggies",           ko:"피기 12개",
+          descEn:"A box of 12 pigs in a blanket (kolaches).",
+          descKo:"콜라체 12개 박스." },
+      ]
+    },
+    {
+      titleEn: "☕ Drinks",
+      titleKo: "☕ 음료",
+      items: [
+        { emoji:"☕", en:"Fresh Organic Coffee",    ko:"유기농 원두 커피",
+          descEn:"Locally roasted by Denton's West Oak Coffee, ground fresh and brewed right here.",
+          descKo:"덴턴의 웨스트 오크 커피에서 로스팅한 신선한 원두로 내린 커피." },
+        { emoji:"🧋", en:"Starbucks Drinks",        ko:"스타벅스 음료",
+          descEn:"Made with signature espresso coffee.",
+          descKo:"시그니처 에스프레소로 만든 음료." },
+        { emoji:"🧋", en:"Dunkin' Iced Coffee",     ko:"던킨 아이스 커피",
+          descEn:"Brewed coffee served over ice.",
+          descKo:"얼음 위에 부은 브루잉 커피." },
+        { emoji:"🍊", en:"Minute Maid Juice",       ko:"미닛 메이드 주스",
+          descEn:"100% pure squeezed pasteurized orange juice.",
+          descKo:"100% 순수 착즙 오렌지 주스." },
+        { emoji:"🥛", en:"Milk",                    ko:"우유",
+          descEn:"Borden's dairy best.",
+          descKo:"보든 유제품의 최고." },
+        { emoji:"🍫", en:"Horizon Chocolate Milk",  ko:"초콜릿 우유",
+          descEn:"Organic chocolate milk in a box.",
+          descKo:"유기농 초콜릿 우유 박스." },
+        { emoji:"🧃", en:"Capri Sun",               ko:"카프리선",
+          descEn:"Refreshing fruit juice blend in a pouch.",
+          descKo:"상큼한 과일 주스 파우치." },
+        { emoji:"🧃", en:"Sunny D",                 ko:"써니디",
+          descEn:"Sport cap citrus drink.",
+          descKo:"스포츠 캡 감귤 음료." },
+        { emoji:"🧃", en:"Minute Maid Juice Box",   ko:"미닛 메이드 주스 박스",
+          descEn:"Kid's juice box.",
+          descKo:"어린이용 주스 박스." },
+        { emoji:"🥤", en:"Bottle Soda",             ko:"탄산음료 (병)",
+          descEn:"20oz bottle.",
+          descKo:"20온스 병." },
+        { emoji:"🥤", en:"Soda Can",                ko:"탄산음료 (캔)",
+          descEn:"12oz can.",
+          descKo:"12온스 캔." },
+        { emoji:"🧉", en:"Monster Energy",          ko:"몬스터 에너지",
+          descEn:"Green, White, Mango Loco, Khaotic, Pacific Punch, and more.",
+          descKo:"그린, 화이트, 망고 로코, 카오틱, 퍼시픽 펀치 등." },
+        { emoji:"🐂", en:"Red Bull",                ko:"레드불",
+          descEn:"Energy drink.",
+          descKo:"에너지 드링크." },
+        { emoji:"💧", en:"Bottled Water",           ko:"생수",
+          descEn:"Ozarka 20oz.",
+          descKo:"오자르카 20온스." },
+      ]
+    }
+  ];
 
   // ── rendering (no need to edit below this line) ──────
   let lang = 'en';
 
   function renderMenus() {
-    ['palace','holey'].forEach(store => {
-      document.getElementById('grid-' + store).innerHTML =
-        MENU_DATA[store].map(item => {
+    document.getElementById('grid-holey').innerHTML =
+      MENU_DATA.map(section => {
+        const title = lang === 'ko' ? section.titleKo : section.titleEn;
+        const cards = section.items.map(item => {
           const name  = lang === 'ko' ? item.ko     : item.en;
           const desc  = lang === 'ko' ? item.descKo : item.descEn;
           const badge = item.badge
@@ -607,13 +736,13 @@
               <span class="mcard-emoji">${item.emoji}</span>
               <div class="mcard-name">${name}</div>
               <div class="mcard-desc">${desc}</div>
-              <div class="mcard-bottom">
-                <div class="mcard-price">${item.price}</div>
-                ${badge}
-              </div>
+              ${badge}
             </div>`;
         }).join('');
-    });
+        return `
+          <div class="menu-section-title">${title}</div>
+          <div class="menu-grid" style="margin-bottom:2.5rem;">${cards}</div>`;
+      }).join('');
   }
 
   function toggleLang() {
@@ -625,13 +754,6 @@
       if (txt) el.innerHTML = txt;
     });
     renderMenus();
-  }
-
-  function switchTab(store) {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
-    document.getElementById('tab-' + store).classList.add('active');
-    document.getElementById('panel-' + store).classList.add('active');
   }
 
   renderMenus();
