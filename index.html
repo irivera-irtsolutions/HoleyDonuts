@@ -396,22 +396,23 @@
 
       body { padding-bottom: 4.5rem; }
       .mobile-cta-bar {
-        display: flex; gap: 0.5rem;
+        display: flex; gap: 0.4rem;
         position: fixed; bottom: 0; left: 0; right: 0; z-index: 199;
         background: rgba(254,248,238,0.97);
         backdrop-filter: blur(8px);
         border-top: 1.5px dashed var(--border);
-        padding: 0.55rem 0.75rem;
+        padding: 0.55rem 0.6rem;
         box-shadow: 0 -4px 16px rgba(61,31,11,0.08);
       }
       .mobile-cta-bar a {
         flex: 1; text-align: center;
-        padding: 0.75rem 0.5rem; border-radius: 0.5rem;
+        padding: 0.7rem 0.25rem; border-radius: 0.5rem;
         text-decoration: none;
-        font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.05rem;
+        font-family: 'Caveat', cursive; font-weight: 700; font-size: 0.95rem;
       }
-      .mobile-cta-call  { background: var(--caramel); color: #fff; }
-      .mobile-cta-order { background: var(--brown);   color: var(--cream); }
+      .mobile-cta-call { background: var(--caramel); color: #fff; }
+      .mobile-cta-ue   { background: #06C167;        color: #fff; }
+      .mobile-cta-dd   { background: #FF3008;        color: #fff; }
     }
   </style>
 </head>
@@ -587,7 +588,8 @@
 <!-- STICKY MOBILE CTA -->
 <div class="mobile-cta-bar">
   <a href="tel:9402437095" class="mobile-cta-call t" data-en="📞 Call" data-ko="📞 전화">📞 Call</a>
-  <a href="#order" class="mobile-cta-order t" data-en="🍩 Order" data-ko="🍩 주문">🍩 Order</a>
+  <a href="https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg" target="_blank" class="mobile-cta-ue t" data-en="Uber Eats" data-ko="우버이츠">Uber Eats</a>
+  <a href="https://www.doordash.com/store/holey-donuts-denton-656567/" target="_blank" class="mobile-cta-dd t" data-en="DoorDash" data-ko="도어대시">DoorDash</a>
 </div>
 
 <script>
