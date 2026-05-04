@@ -166,6 +166,13 @@
       font-family: 'Caveat', cursive; font-size: 1.05rem; font-weight: 600;
       background: var(--warm); border: 1.5px dashed var(--border);
       border-radius: 0.5rem; padding: 0.38rem 1rem;
+      color: var(--brown); text-decoration: none; cursor: pointer;
+      display: inline-block;
+      transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.18s;
+    }
+    .store-tag:hover {
+      background: var(--caramel); color: #fff; border-color: var(--caramel);
+      transform: translateY(-2px);
     }
     .hero-btns { display: flex; gap: 0.85rem; flex-wrap: wrap; justify-content: center; }
 
@@ -434,8 +441,8 @@
     Your cozy neighborhood donut shop in Denton, TX. Fresh donuts every single morning. Come as you are.
   </p>
   <div class="hero-stores">
-    <div class="store-tag">📍 Holey Donuts</div>
-    <div class="store-tag">🎉 Catering Available</div>
+    <a href="#locations" class="store-tag">📍 Holey Donuts</a>
+    <a href="#catering"  class="store-tag">🎉 Catering Available</a>
   </div>
   <div class="hero-btns">
     <a href="#menu"  class="btn btn-warm   t" data-en="See Our Menu"   data-ko="메뉴 보기">See Our Menu</a>
