@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🍩</text></svg>'>
   <title>Holey Donuts | Fresh Handmade Donuts in Denton, TX</title>
   <meta name="description" content="Holey Donuts in Denton, TX — fresh handmade donuts, kolaches, and breakfast items every morning. Order on Uber Eats or DoorDash, or visit us at 5050 Teasley Ln #112, Denton TX 76210.">
   <meta name="keywords" content="donuts Denton TX, donut shop Denton, fresh donuts Denton Texas, kolaches Denton, breakfast Denton TX, Holey Donuts, donuts near me, donut delivery Denton">
@@ -317,6 +318,11 @@
     }
     .info-val { font-size: 0.88rem; line-height: 1.55; }
     .lcard-foot { padding: 0 1.75rem 1.5rem; }
+    .lcard-map {
+      width: 100%; aspect-ratio: 16 / 10; border: 0; display: block;
+      border-top: 1.5px dashed var(--border);
+      border-bottom: 1.5px dashed var(--border);
+    }
 
     /* ── CATERING ── */
     .catering-box {
@@ -378,12 +384,34 @@
     }
     .foot-note { font-size: 0.82rem; font-style: italic; }
 
+    /* ── MOBILE STICKY CTA ── */
+    .mobile-cta-bar { display: none; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 720px) {
       nav { padding: 0.8rem 1rem; }
       .nav-links { display: none; }
       section { padding: 4rem 1.25rem; }
       #hero { padding: 7rem 1.25rem 5rem; }
+
+      body { padding-bottom: 4.5rem; }
+      .mobile-cta-bar {
+        display: flex; gap: 0.5rem;
+        position: fixed; bottom: 0; left: 0; right: 0; z-index: 199;
+        background: rgba(254,248,238,0.97);
+        backdrop-filter: blur(8px);
+        border-top: 1.5px dashed var(--border);
+        padding: 0.55rem 0.75rem;
+        box-shadow: 0 -4px 16px rgba(61,31,11,0.08);
+      }
+      .mobile-cta-bar a {
+        flex: 1; text-align: center;
+        padding: 0.75rem 0.5rem; border-radius: 0.5rem;
+        text-decoration: none;
+        font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.05rem;
+      }
+      .mobile-cta-call  { background: var(--caramel); color: #fff; }
+      .mobile-cta-order { background: var(--brown);   color: var(--cream); }
     }
   </style>
 </head>
@@ -497,7 +525,11 @@
           </div>
         </div>
       </div>
-      <div class="lcard-foot">
+      <iframe class="lcard-map"
+              src="https://maps.google.com/maps?q=5050%20Teasley%20Ln%20%23112%20Denton%20TX%2076210&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Map to Holey Donuts, 5050 Teasley Ln #112, Denton TX 76210"></iframe>
+      <div class="lcard-foot" style="padding-top:1.5rem;">
         <a href="https://www.google.com/maps/place/5050+Teasley+Ln+%23112,+Denton,+TX+76210" target="_blank" class="btn btn-warm t"
            data-en="Get Directions" data-ko="길 찾기">Get Directions</a>
       </div>
@@ -551,6 +583,12 @@
     Made with 🍩 & love. Come visit us soon.
   </p>
 </footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="mobile-cta-bar">
+  <a href="tel:9402437095" class="mobile-cta-call t" data-en="📞 Call" data-ko="📞 전화">📞 Call</a>
+  <a href="#order" class="mobile-cta-order t" data-en="🍩 Order" data-ko="🍩 주문">🍩 Order</a>
+</div>
 
 <script>
   // ═══════════════════════════════════════════════════════
