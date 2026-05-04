@@ -10,19 +10,16 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://holeydonutsdenton.com">
 
-  <!-- Open Graph (Facebook, iMessage previews) -->
   <meta property="og:type"        content="restaurant">
   <meta property="og:title"       content="Holey Donuts | Fresh Handmade Donuts in Denton, TX">
   <meta property="og:description" content="Fresh handmade donuts, kolaches & breakfast every morning. Visit us at 5050 Teasley Ln #112, Denton TX or order delivery on Uber Eats & DoorDash.">
   <meta property="og:url"         content="https://holeydonutsdenton.com">
   <meta property="og:locale"      content="en_US">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary">
   <meta name="twitter:title"       content="Holey Donuts | Fresh Handmade Donuts in Denton, TX">
   <meta name="twitter:description" content="Fresh handmade donuts, kolaches & breakfast every morning in Denton, TX.">
 
-  <!-- Local Business Schema (tells Google this is a real local business) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -108,7 +105,6 @@
       font-family: 'Pacifico', cursive;
       font-size: 1.1rem; color: var(--brown); line-height: 1;
     }
-    .nav-brand .amp { color: var(--caramel); margin: 0 0.25em; }
     .nav-links {
       display: flex; align-items: center; gap: 1.75rem; list-style: none;
     }
@@ -232,23 +228,6 @@
 
     /* ── MENU ── */
     #menu { background: var(--cream); }
-    .tabs {
-      display: flex; justify-content: center; gap: 0.5rem;
-      flex-wrap: wrap; margin-bottom: 2.75rem;
-    }
-    .tab {
-      font-family: 'Caveat', cursive; font-size: 1.1rem; font-weight: 700;
-      padding: 0.5rem 1.5rem; cursor: pointer;
-      background: var(--warm); color: var(--brown);
-      border: 1.5px dashed var(--border); border-radius: 0.5rem;
-      transition: all 0.2s;
-    }
-    .tab.active {
-      background: var(--caramel); color: #fff;
-      border-color: var(--caramel); border-style: solid;
-    }
-    .menu-panel { display: none; }
-    .menu-panel.active { display: block; }
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -277,15 +256,11 @@
       font-size: 0.82rem; font-style: italic; color: var(--muted);
       line-height: 1.55; margin-bottom: 0.9rem;
     }
-    .mcard-bottom { display: flex; align-items: center; justify-content: space-between; }
-    .mcard-price {
-      font-family: 'Caveat', cursive; font-size: 1.4rem; font-weight: 700;
-      color: var(--caramel);
-    }
     .mcard-badge {
       font-family: 'Caveat', cursive; font-size: 0.82rem; font-weight: 700;
       background: var(--rose); color: #fff;
       padding: 0.15rem 0.55rem; border-radius: 0.3rem;
+      display: inline-block; margin-top: 0.25rem;
     }
 
     /* ── LOCATIONS ── */
@@ -325,24 +300,39 @@
     }
 
     /* ── CATERING ── */
-    .catering-box {
-      display: flex; gap: 1.25rem; align-items: flex-start;
-      background: var(--warm); border: 1.5px dashed var(--caramel);
-      border-radius: 0.75rem; padding: 1.75rem;
-      max-width: 800px; margin: 0 auto 3rem;
+    #catering { background: var(--cream); }
+    .catering-chips {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0.65rem; margin-bottom: 3rem;
     }
-    .catering-emoji { font-size: 2rem; flex-shrink: 0; }
-    .catering-title {
+    .catering-chip {
+      font-family: 'Caveat', cursive; font-size: 1.05rem; font-weight: 600;
+      background: var(--warm); border: 1.5px dashed var(--border);
+      border-radius: 2rem; padding: 0.4rem 1.1rem; color: var(--brown);
+    }
+    .catering-main {
+      max-width: 640px; margin: 0 auto; text-align: center;
+    }
+    .catering-main p {
+      font-size: 1rem; line-height: 1.85; font-style: italic;
+      color: var(--brown); margin-bottom: 2rem;
+    }
+    .catering-cta {
+      display: inline-flex; align-items: center; gap: 0.6rem;
       font-family: 'Pacifico', cursive; font-size: 1.2rem;
-      color: var(--brown); margin-bottom: 0.5rem;
+      background: var(--caramel); color: #fff;
+      padding: 0.9rem 2.5rem; border-radius: 0.6rem;
+      text-decoration: none;
+      transition: background 0.18s, transform 0.18s;
     }
-    .catering-text {
-      font-size: 0.9rem; font-style: italic;
-      color: var(--muted); line-height: 1.65;
+    .catering-cta:hover { background: var(--rose); transform: translateY(-2px); }
+    .catering-note {
+      font-family: 'Caveat', cursive; font-size: 0.95rem;
+      color: var(--muted); margin-top: 1rem;
     }
 
     /* ── ORDER ── */
-    #order { background: var(--cream); }
+    #order { background: var(--warm); }
     .order-sub {
       font-style: italic; color: var(--muted); text-align: center;
       margin: -2rem auto 3rem; max-width: 380px;
@@ -354,7 +344,7 @@
       gap: 2rem; max-width: 800px; margin: 0 auto;
     }
     .ocard {
-      background: var(--warm); border: 1.5px dashed var(--border);
+      background: var(--card); border: 1.5px dashed var(--border);
       border-radius: 0.75rem; padding: 1.75rem;
     }
     .ocard-name {
@@ -422,10 +412,11 @@
 <nav>
   <div class="nav-brand">Holey Donuts</div>
   <ul class="nav-links">
-    <li><a href="#about"     class="t" data-en="Our Story"     data-ko="우리 이야기">Our Story</a></li>
-    <li><a href="#menu"      class="t" data-en="Menu"          data-ko="메뉴">Menu</a></li>
-    <li><a href="#locations" class="t" data-en="Locations"     data-ko="위치">Locations</a></li>
-    <li><a href="#order"     class="t" data-en="Order"         data-ko="주문">Order</a></li>
+    <li><a href="#about"     class="t" data-en="Our Story" data-ko="우리 이야기">Our Story</a></li>
+    <li><a href="#menu"      class="t" data-en="Menu"      data-ko="메뉴">Menu</a></li>
+    <li><a href="#locations" class="t" data-en="Locations" data-ko="위치">Locations</a></li>
+    <li><a href="#catering"  class="t" data-en="Catering"  data-ko="케이터링">Catering</a></li>
+    <li><a href="#order"     class="t" data-en="Order"     data-ko="주문">Order</a></li>
   </ul>
   <button class="lang-btn" onclick="toggleLang()">
     <span id="opt-en" class="lang-active">EN</span> / <span id="opt-ko">한국어</span>
@@ -444,10 +435,11 @@
   </p>
   <div class="hero-stores">
     <div class="store-tag">📍 Holey Donuts</div>
+    <div class="store-tag">🎉 Catering Available</div>
   </div>
   <div class="hero-btns">
-    <a href="#menu"  class="btn btn-warm   t" data-en="See Our Menu"    data-ko="메뉴 보기">See Our Menu</a>
-    <a href="#order" class="btn btn-outline t" data-en="Order Delivery"  data-ko="배달 주문">Order Delivery</a>
+    <a href="#menu"  class="btn btn-warm   t" data-en="See Our Menu"   data-ko="메뉴 보기">See Our Menu</a>
+    <a href="#order" class="btn btn-outline t" data-en="Order Delivery" data-ko="배달 주문">Order Delivery</a>
   </div>
   <div class="scallop">
     <svg viewBox="0 0 1440 52" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -468,12 +460,10 @@
     <div class="about-photo">😊</div>
     <p class="about-text t"
        data-en="We started with one fryer, a handful of recipes, and a dream to make the neighborhood a little sweeter. Every donut is still made by hand, every single morning, just like it's always been. We know our regulars by name, and we hope to know yours too."
-       data-ko="우리는 튀김기 하나, 몇 가지 레시피, 그리고 동네를 조금 더 달콤하게 만들겠다는 꿈으로 시작했습니다. 모든 도넛은 여전히 매일 아침 손으로 직접 만들어집니다. 단골손님들의 이름을 다 알고, 여러분의 이름도 알고 싶습니다.">
+       data-ko="우리는 튀김기 하나, 몇 가지 레시피, 그리고 동네를 조금 더 달코하게 만들겠다는 꿈으로 시작했습니다. 모든 도넛은 여전히 매일 아침 손으로 직접 만들어집니다. 단골손님들의 이름을 다 알고, 여러분의 이름도 알고 싶습니다.">
       We started with one fryer, a handful of recipes, and a dream to make the neighborhood a little sweeter. Every donut is still made by hand, every single morning, just like it's always been. We know our regulars by name, and we hope to know yours too.
     </p>
-    <div class="about-sig t"
-         data-en="— Your Friends at Holey Donuts"
-         data-ko="— 홀리 도넛 드림">
+    <div class="about-sig t" data-en="— Your Friends at Holey Donuts" data-ko="— 홀리 도넛 드림">
       — Your Friends at Holey Donuts
     </div>
   </div>
@@ -493,7 +483,6 @@
   <h2 class="sec-title t" data-en="Our Location" data-ko="매장 위치">Our Location</h2>
   <div class="sec-divider">📍</div>
   <div class="loc-grid" style="max-width:460px;">
-
     <div class="lcard">
       <div class="lcard-head rose-head">
         <div class="lcard-store">Holey Donuts</div>
@@ -535,7 +524,38 @@
            data-en="Get Directions" data-ko="길 찾기">Get Directions</a>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- CATERING -->
+<section id="catering">
+  <p class="sec-eyebrow t" data-en="For groups, events & offices" data-ko="단체, 이벤트 & 오피스">For groups, events & offices</p>
+  <h2 class="sec-title t" data-en="Catering & Large Orders" data-ko="케이터링 및 대량 주문">Catering & Large Orders</h2>
+  <div class="sec-divider">🎉</div>
+
+  <div class="catering-chips">
+    <div class="catering-chip t" data-en="🏢 Office Breakfast"    data-ko="🏢 오피스 아침">🏢 Office Breakfast</div>
+    <div class="catering-chip t" data-en="🎂 Birthday Parties"   data-ko="🎂 생일 파티">🎂 Birthday Parties</div>
+    <div class="catering-chip t" data-en="🎊 Corporate Events"   data-ko="🎊 기업 행사">🎊 Corporate Events</div>
+    <div class="catering-chip t" data-en="⛪ Church Gatherings"  data-ko="⛪ 교회 모임">⛪ Church Gatherings</div>
+    <div class="catering-chip t" data-en="🎫 School Functions"   data-ko="🎫 학교 행사">🎫 School Functions</div>
+    <div class="catering-chip t" data-en="🎳 Game Day Spreads"   data-ko="🎳 게임데이 스프레드">🎳 Game Day Spreads</div>
+  </div>
+
+  <div class="catering-main">
+    <p class="t"
+       data-en="Need donuts for a crowd? We’ve got you. Whether it’s a dozen boxes for the office or a tower of kolaches for a party, just give us a call and we’ll have everything fresh and ready. The more the merrier — we love a big order."
+       data-ko="많은 사람들을 위한 도넛이 필요하신가요? 저희가 도와드리겠습니다. 오피스용 여러 박스든, 파티용 콜라체 탑이든 전화한 통이면 신선하게 준비해 드리겠습니다.">
+      Need donuts for a crowd? We’ve got you. Whether it’s a dozen boxes for the office or a tower of kolaches for a party, just give us a call and we’ll have everything fresh and ready. The more the merrier — we love a big order.
+    </p>
+    <a href="tel:9402437095" class="catering-cta">
+      📞 <span class="t" data-en="Call to Place a Large Order" data-ko="대량 주문 전화하기">Call to Place a Large Order</span>
+    </a>
+    <p class="catering-note t"
+       data-en="(940) 243-7095 · Mon–Fri 5:30am–12pm · Sat–Sun 6am–12pm"
+       data-ko="(940) 243-7095 · 월–금 오전 5시 30분–낙 12시 · 토–일 오전 6시–낙 12시">
+      (940) 243-7095 &middot; Mon–Fri 5:30am–12pm &middot; Sat–Sun 6am–12pm
+    </p>
   </div>
 </section>
 
@@ -545,31 +565,20 @@
   <h2 class="sec-title t" data-en="Order Delivery" data-ko="배달 주문">Order Delivery</h2>
   <div class="sec-divider">🛵</div>
   <p class="order-sub t"
-     data-en="We're on Uber Eats and DoorDash — fresh donuts right to your door."
+     data-en="We’re on Uber Eats and DoorDash — fresh donuts right to your door."
      data-ko="우버이츠와 도어대시로 신선한 도넛을 문 앞까지 배달해 드립니다.">
-    We're on Uber Eats and DoorDash — fresh donuts right to your door.
+    We’re on Uber Eats and DoorDash — fresh donuts right to your door.
   </p>
-
-  <div class="catering-box">
-    <div class="catering-emoji">📞</div>
-    <div>
-      <div class="catering-title t" data-en="Catering & Large Orders" data-ko="케이터링 및 대량 주문">Catering & Large Orders</div>
-      <p class="catering-text t"
-         data-en="Planning an event, office breakfast, or party? We'd love to help. Call us to place large orders and we'll make sure everything is fresh and ready for you."
-         data-ko="이벤트, 오피스 아침 식사, 또는 파티를 계획 중이신가요? 기꺼이 도와드리겠습니다. 대량 주문은 전화로 문의해 주세요.">
-        Planning an event, office breakfast, or party? We'd love to help. Call us to place large orders and we'll make sure everything is fresh and ready for you.
-      </p>
-      <a href="tel:9402437095" class="btn btn-warm" style="margin-top:0.85rem;display:inline-block;">
-        📞 <span class="t" data-en="Call (940) 243-7095" data-ko="전화 (940) 243-7095">Call (940) 243-7095</span>
-      </a>
-    </div>
-  </div>
   <div class="order-grid" style="max-width:400px;">
     <div class="ocard">
       <div class="ocard-name">🍩 Holey Donuts</div>
       <div class="order-btns">
-        <a href="https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg" target="_blank" class="btn-ue"><span class="t" data-en="Order on Uber Eats" data-ko="우버이츠로 주문">Order on Uber Eats</span></a>
-        <a href="https://www.doordash.com/store/holey-donuts-denton-656567/" target="_blank" class="btn-dd"><span class="t" data-en="Order on DoorDash" data-ko="도어대시로 주문">Order on DoorDash</span></a>
+        <a href="https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg" target="_blank" class="btn-ue">
+          <span class="t" data-en="Order on Uber Eats" data-ko="우버이츠로 주문">Order on Uber Eats</span>
+        </a>
+        <a href="https://www.doordash.com/store/holey-donuts-denton-656567/" target="_blank" class="btn-dd">
+          <span class="t" data-en="Order on DoorDash" data-ko="도어대시로 주문">Order on DoorDash</span>
+        </a>
       </div>
     </div>
   </div>
@@ -580,7 +589,7 @@
   <div class="foot-brand">Holey Donuts</div>
   <p class="foot-note t"
      data-en="Made with 🍩 & love. Come visit us soon."
-     data-ko="🍩와 사랑으로 만들었습니다. 곧 방문해 주세요.">
+     data-ko="🍩와 사랑으로 만들었습니다. 곣 방문해 주세요.">
     Made with 🍩 & love. Come visit us soon.
   </p>
 </footer>
@@ -593,12 +602,6 @@
 </div>
 
 <script>
-  // ═══════════════════════════════════════════════════════
-  //  MENU DATA — organized by section
-  //  Each section: { titleEn, titleKo, items: [...] }
-  //  Each item: { emoji, en, ko, descEn, descKo, badge?, badgeKo? }
-  // ═══════════════════════════════════════════════════════
-
   const MENU_DATA = [
     {
       titleEn: "🍩 Donuts",
@@ -619,7 +622,7 @@
         { emoji:"🎂", en:"Birthday Cake",          ko:"생일 케이크",
           descEn:"Raised donut with white icing and colorful sprinkles.",
           descKo:"흰 아이싱과 알록달록 스프링클로 장식한 도넛." },
-        { emoji:"🍬", en:"Cotton Candy",           ko:"솜사탕",
+        { emoji:"🍬", en:"Cotton Candy",           ko:"솜사탑",
           descEn:"Raised donut with berry blue icing and sprinkles.",
           descKo:"베리 블루 아이싱과 스프링클을 올린 도넛." },
         { emoji:"🥥", en:"White Coconut",          ko:"화이트 코코넛",
@@ -685,7 +688,7 @@
           descKo:"햄과 아메리칸 치즈를 버터 크루아상으로 감싼 것." },
         { emoji:"🌯", en:"Breakfast Burrito",        ko:"브렉퍼스트 부리또",
           descEn:"Made in house! Bacon, sausage, egg and cheese in a warm flour tortilla.",
-          descKo:"직접 만든 브리또! 베이컨, 소시지, 달걀, 치즈를 따뜻한 또띠야에." },
+          descKo:"직접 만든 브리또! 베이컨, 소시지, 달걀, 치즈를 따뜻한 또뉠야에." },
       ]
     },
     {
@@ -759,7 +762,6 @@
     }
   ];
 
-  // ── rendering (no need to edit below this line) ──────
   let lang = 'en';
 
   function renderMenus() {
