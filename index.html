@@ -57,7 +57,7 @@
         "closes": "12:00"
       }
     ],
-    "hasMap": "https://www.google.com/maps/place/5050+Teasley+Ln+%23112,+Denton,+TX+76210",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=5050+Teasley+Ln+%23112%2C+Denton%2C+TX+76210",
     "sameAs": [
       "https://www.doordash.com/store/holey-donuts-denton-656567/",
       "https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg"
@@ -188,7 +188,7 @@
     }
 
     /* ── SECTION SHARED ── */
-    section { padding: 5.5rem 2rem; }
+    section { padding: 5.5rem 2rem; scroll-margin-top: 70px; }
     .sec-eyebrow {
       font-family: 'Caveat', cursive; font-size: 1.15rem; font-weight: 700;
       color: var(--caramel); text-align: center; margin-bottom: 0.4rem;
@@ -381,7 +381,7 @@
     @media (max-width: 720px) {
       nav { padding: 0.8rem 1rem; }
       .nav-links { display: none; }
-      section { padding: 4rem 1.25rem; }
+      section { padding: 4rem 1.25rem; scroll-margin-top: 60px; }
       #hero { padding: 7rem 1.25rem 5rem; }
 
       body { padding-bottom: 4.5rem; }
@@ -516,11 +516,11 @@
         </div>
       </div>
       <iframe class="lcard-map"
-              src="https://maps.google.com/maps?q=5050%20Teasley%20Ln%20%23112%20Denton%20TX%2076210&output=embed"
+              src="https://www.google.com/maps?q=5050+Teasley+Ln+%23112+Denton+TX+76210&hl=en&z=16&output=embed"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               title="Map to Holey Donuts, 5050 Teasley Ln #112, Denton TX 76210"></iframe>
       <div class="lcard-foot" style="padding-top:1.5rem;">
-        <a href="https://www.google.com/maps/place/5050+Teasley+Ln+%23112,+Denton,+TX+76210" target="_blank" class="btn btn-warm t"
+        <a href="https://www.google.com/maps/dir/?api=1&destination=5050+Teasley+Ln+%23112%2C+Denton%2C+TX+76210" target="_blank" rel="noopener" class="btn btn-warm t"
            data-en="Get Directions" data-ko="길 찾기">Get Directions</a>
       </div>
     </div>
@@ -544,9 +544,9 @@
 
   <div class="catering-main">
     <p class="t"
-       data-en="Need donuts for a crowd? We’ve got you. Whether it’s a dozen boxes for the office or a tower of kolaches for a party, just give us a call and we’ll have everything fresh and ready. The more the merrier — we love a big order."
+       data-en="Need donuts for a crowd? We've got you. Whether it's a dozen boxes for the office or a tower of kolaches for a party, just give us a call and we'll have everything fresh and ready. The more the merrier — we love a big order."
        data-ko="많은 사람들을 위한 도넛이 필요하신가요? 저희가 도와드리겠습니다. 오피스용 여러 박스든, 파티용 콜라체 탑이든 전화한 통이면 신선하게 준비해 드리겠습니다.">
-      Need donuts for a crowd? We’ve got you. Whether it’s a dozen boxes for the office or a tower of kolaches for a party, just give us a call and we’ll have everything fresh and ready. The more the merrier — we love a big order.
+      Need donuts for a crowd? We've got you. Whether it's a dozen boxes for the office or a tower of kolaches for a party, just give us a call and we'll have everything fresh and ready. The more the merrier — we love a big order.
     </p>
     <a href="tel:9402437095" class="catering-cta">
       📞 <span class="t" data-en="Call to Place a Large Order" data-ko="대량 주문 전화하기">Call to Place a Large Order</span>
@@ -565,18 +565,18 @@
   <h2 class="sec-title t" data-en="Order Delivery" data-ko="배달 주문">Order Delivery</h2>
   <div class="sec-divider">🛵</div>
   <p class="order-sub t"
-     data-en="We’re on Uber Eats and DoorDash — fresh donuts right to your door."
+     data-en="We're on Uber Eats and DoorDash — fresh donuts right to your door."
      data-ko="우버이츠와 도어대시로 신선한 도넛을 문 앞까지 배달해 드립니다.">
-    We’re on Uber Eats and DoorDash — fresh donuts right to your door.
+    We're on Uber Eats and DoorDash — fresh donuts right to your door.
   </p>
   <div class="order-grid" style="max-width:400px;">
     <div class="ocard">
       <div class="ocard-name">🍩 Holey Donuts</div>
       <div class="order-btns">
-        <a href="https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg" target="_blank" class="btn-ue">
+        <a href="https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg" target="_blank" rel="noopener" class="btn-ue">
           <span class="t" data-en="Order on Uber Eats" data-ko="우버이츠로 주문">Order on Uber Eats</span>
         </a>
-        <a href="https://www.doordash.com/store/holey-donuts-denton-656567/" target="_blank" class="btn-dd">
+        <a href="https://www.doordash.com/store/holey-donuts-denton-656567/" target="_blank" rel="noopener" class="btn-dd">
           <span class="t" data-en="Order on DoorDash" data-ko="도어대시로 주문">Order on DoorDash</span>
         </a>
       </div>
@@ -597,8 +597,8 @@
 <!-- STICKY MOBILE CTA -->
 <div class="mobile-cta-bar">
   <a href="tel:9402437095" class="mobile-cta-call t" data-en="📞 Call" data-ko="📞 전화">📞 Call</a>
-  <a href="https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg" target="_blank" class="mobile-cta-ue t" data-en="Uber Eats" data-ko="우버이츠">Uber Eats</a>
-  <a href="https://www.doordash.com/store/holey-donuts-denton-656567/" target="_blank" class="mobile-cta-dd t" data-en="DoorDash" data-ko="도어대시">DoorDash</a>
+  <a href="https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg" target="_blank" rel="noopener" class="mobile-cta-ue t" data-en="Uber Eats" data-ko="우버이츠">Uber Eats</a>
+  <a href="https://www.doordash.com/store/holey-donuts-denton-656567/" target="_blank" rel="noopener" class="mobile-cta-dd t" data-en="DoorDash" data-ko="도어대시">DoorDash</a>
 </div>
 
 <script>
