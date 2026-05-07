@@ -8,27 +8,42 @@
   <meta name="description" content="Holey Donuts in Denton, TX — fresh handmade donuts, kolaches, and breakfast items every morning. Order on Uber Eats or DoorDash, or visit us at 5050 Teasley Ln #112, Denton TX 76210.">
   <meta name="keywords" content="donuts Denton TX, donut shop Denton, fresh donuts Denton Texas, kolaches Denton, breakfast Denton TX, Holey Donuts, donuts near me, donut delivery Denton">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://holeydonutsdenton.com">
+  <meta name="theme-color" content="#FEF8EE">
+  <link rel="canonical" href="https://holeydonutsdenton.com/">
 
-  <meta property="og:type"        content="restaurant">
-  <meta property="og:title"       content="Holey Donuts | Fresh Handmade Donuts in Denton, TX">
-  <meta property="og:description" content="Fresh handmade donuts, kolaches & breakfast every morning. Visit us at 5050 Teasley Ln #112, Denton TX or order delivery on Uber Eats & DoorDash.">
-  <meta property="og:url"         content="https://holeydonutsdenton.com">
-  <meta property="og:locale"      content="en_US">
+  <!-- Open Graph -->
+  <meta property="og:type"            content="restaurant">
+  <meta property="og:site_name"       content="Holey Donuts">
+  <meta property="og:title"           content="Holey Donuts | Fresh Handmade Donuts in Denton, TX">
+  <meta property="og:description"     content="Fresh handmade donuts, kolaches & breakfast every morning. Visit us at 5050 Teasley Ln #112, Denton TX or order delivery on Uber Eats & DoorDash.">
+  <meta property="og:url"             content="https://holeydonutsdenton.com/">
+  <meta property="og:locale"          content="en_US">
+  <meta property="og:image"           content="https://holeydonutsdenton.com/og-image.svg">
+  <meta property="og:image:width"     content="1200">
+  <meta property="og:image:height"    content="630">
+  <meta property="og:image:alt"       content="Holey Donuts — Fresh Handmade Donuts in Denton, TX">
 
-  <meta name="twitter:card"        content="summary">
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Holey Donuts | Fresh Handmade Donuts in Denton, TX">
   <meta name="twitter:description" content="Fresh handmade donuts, kolaches & breakfast every morning in Denton, TX.">
+  <meta name="twitter:image"       content="https://holeydonutsdenton.com/og-image.svg">
+  <meta name="twitter:image:alt"   content="Holey Donuts — Fresh Handmade Donuts in Denton, TX">
 
+  <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Bakery",
+    "@id": "https://holeydonutsdenton.com/#business",
     "name": "Holey Donuts",
     "description": "Fresh handmade donuts, kolaches, and breakfast items made every morning in Denton, TX.",
-    "url": "https://holeydonutsdenton.com",
+    "url": "https://holeydonutsdenton.com/",
+    "image": "https://holeydonutsdenton.com/og-image.svg",
     "telephone": "+19402437095",
     "priceRange": "$",
+    "paymentAccepted": "Cash, Credit Card",
+    "currenciesAccepted": "USD",
     "servesCuisine": ["Donuts", "Kolaches", "Breakfast"],
     "address": {
       "@type": "PostalAddress",
@@ -43,6 +58,12 @@
       "latitude": 33.143945,
       "longitude": -97.105807
     },
+    "areaServed": [
+      { "@type": "City", "name": "Denton" },
+      { "@type": "City", "name": "Corinth" },
+      { "@type": "City", "name": "Lake Dallas" },
+      { "@type": "City", "name": "Highland Village" }
+    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -58,6 +79,7 @@
       }
     ],
     "hasMap": "https://www.google.com/maps/search/?api=1&query=5050+Teasley+Ln+%23112%2C+Denton%2C+TX+76210",
+    "hasMenu": "https://holeydonutsdenton.com/#menu",
     "sameAs": [
       "https://www.doordash.com/store/holey-donuts-denton-656567/",
       "https://www.ubereats.com/store/holey-donuts/n31p3_eSQEe_I-S40TlgLg"
@@ -66,6 +88,7 @@
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -77,7 +100,6 @@
       --brown:    #3D1F0B;
       --caramel:  #B8692A;
       --rose:     #C96B5A;
-      --gold:     #E8A84C;
       --muted:    rgba(61,31,11,0.5);
       --border:   rgba(61,31,11,0.13);
     }
@@ -425,14 +447,14 @@
     <li><a href="#catering"  class="t" data-en="Catering"  data-ko="케이터링">Catering</a></li>
     <li><a href="#order"     class="t" data-en="Order"     data-ko="주문">Order</a></li>
   </ul>
-  <button class="lang-btn" onclick="toggleLang()">
+  <button class="lang-btn" onclick="toggleLang()" aria-label="Switch language between English and Korean">
     <span id="opt-en" class="lang-active">EN</span> / <span id="opt-ko">한국어</span>
   </button>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <span class="hero-donut">🍩</span>
+  <span class="hero-donut" aria-hidden="true">🍩</span>
   <p class="hero-eyebrow t" data-en="Denton's favorite donut shop since day one" data-ko="처음부터 덴턴이 사랑한 도넛 가게">Denton's favorite donut shop since day one</p>
   <h1 class="hero-title t" data-en="Everyday <span class='rose'>Sweetness</span>" data-ko="일상의 <span class='rose'>달콤함</span>">Everyday <span class="rose">Sweetness</span></h1>
   <p class="hero-sub t"
@@ -448,7 +470,7 @@
     <a href="#menu"  class="btn btn-warm   t" data-en="See Our Menu"   data-ko="메뉴 보기">See Our Menu</a>
     <a href="#order" class="btn btn-outline t" data-en="Order Delivery" data-ko="배달 주문">Order Delivery</a>
   </div>
-  <div class="scallop">
+  <div class="scallop" aria-hidden="true">
     <svg viewBox="0 0 1440 52" fill="none" xmlns="http://www.w3.org/2000/svg"
          preserveAspectRatio="none" style="width:100%;display:block;">
       <path d="M0 52 C90 14,180 14,270 52 C360 90,450 90,540 52 C630 14,720 14,810 52
@@ -462,12 +484,12 @@
 <section id="about">
   <p class="sec-eyebrow t" data-en="A little about us" data-ko="우리를 소개할게요">A little about us</p>
   <h2 class="sec-title t" data-en="Our Story" data-ko="우리 이야기">Our Story</h2>
-  <div class="sec-divider">🍩</div>
+  <div class="sec-divider" aria-hidden="true">🍩</div>
   <div class="about-inner">
-    <div class="about-photo">😊</div>
+    <div class="about-photo" aria-hidden="true">😊</div>
     <p class="about-text t"
        data-en="We started with one fryer, a handful of recipes, and a dream to make the neighborhood a little sweeter. Every donut is still made by hand, every single morning, just like it's always been. We know our regulars by name, and we hope to know yours too."
-       data-ko="우리는 튀김기 하나, 몇 가지 레시피, 그리고 동네를 조금 더 달코하게 만들겠다는 꿈으로 시작했습니다. 모든 도넛은 여전히 매일 아침 손으로 직접 만들어집니다. 단골손님들의 이름을 다 알고, 여러분의 이름도 알고 싶습니다.">
+       data-ko="우리는 튀김기 하나, 몇 가지 레시피, 그리고 동네를 조금 더 달콤하게 만들겠다는 꿈으로 시작했습니다. 모든 도넛은 여전히 매일 아침 손으로 직접 만들어집니다. 단골손님들의 이름을 다 알고, 여러분의 이름도 알고 싶습니다.">
       We started with one fryer, a handful of recipes, and a dream to make the neighborhood a little sweeter. Every donut is still made by hand, every single morning, just like it's always been. We know our regulars by name, and we hope to know yours too.
     </p>
     <div class="about-sig t" data-en="— Your Friends at Holey Donuts" data-ko="— 홀리 도넛 드림">
@@ -480,7 +502,7 @@
 <section id="menu">
   <p class="sec-eyebrow t" data-en="Made fresh every morning" data-ko="매일 아침 신선하게">Made fresh every morning</p>
   <h2 class="sec-title t" data-en="Our Menu" data-ko="저희 메뉴">Our Menu</h2>
-  <div class="sec-divider">✦</div>
+  <div class="sec-divider" aria-hidden="true">✦</div>
   <div id="grid-holey"></div>
 </section>
 
@@ -488,7 +510,7 @@
 <section id="locations">
   <p class="sec-eyebrow t" data-en="Come see us" data-ko="방문해 주세요">Come see us</p>
   <h2 class="sec-title t" data-en="Our Location" data-ko="매장 위치">Our Location</h2>
-  <div class="sec-divider">📍</div>
+  <div class="sec-divider" aria-hidden="true">📍</div>
   <div class="loc-grid" style="max-width:460px;">
     <div class="lcard">
       <div class="lcard-head rose-head">
@@ -497,14 +519,14 @@
       </div>
       <div class="lcard-body">
         <div class="info-row">
-          <div class="info-icon">📍</div>
+          <div class="info-icon" aria-hidden="true">📍</div>
           <div>
             <div class="info-label t" data-en="Address" data-ko="주소">Address</div>
-            <div class="info-val">5050 Teasley Ln #112<br>Denton, TX 76210</div>
+            <address class="info-val" style="font-style:normal;">5050 Teasley Ln #112<br>Denton, TX 76210</address>
           </div>
         </div>
         <div class="info-row">
-          <div class="info-icon">🕐</div>
+          <div class="info-icon" aria-hidden="true">🕐</div>
           <div>
             <div class="info-label t" data-en="Hours" data-ko="영업시간">Hours</div>
             <div class="info-val t"
@@ -515,10 +537,10 @@
           </div>
         </div>
         <div class="info-row">
-          <div class="info-icon">📞</div>
+          <div class="info-icon" aria-hidden="true">📞</div>
           <div>
             <div class="info-label t" data-en="Phone" data-ko="전화번호">Phone</div>
-            <div class="info-val">(940) 243-7095</div>
+            <div class="info-val"><a href="tel:9402437095" style="color:inherit;text-decoration:none;">(940) 243-7095</a></div>
           </div>
         </div>
       </div>
@@ -538,21 +560,21 @@
 <section id="catering">
   <p class="sec-eyebrow t" data-en="For groups, events & offices" data-ko="단체, 이벤트 & 오피스">For groups, events & offices</p>
   <h2 class="sec-title t" data-en="Catering & Large Orders" data-ko="케이터링 및 대량 주문">Catering & Large Orders</h2>
-  <div class="sec-divider">🎉</div>
+  <div class="sec-divider" aria-hidden="true">🎉</div>
 
   <div class="catering-chips">
-    <div class="catering-chip t" data-en="🏢 Office Breakfast"    data-ko="🏢 오피스 아침">🏢 Office Breakfast</div>
-    <div class="catering-chip t" data-en="🎂 Birthday Parties"   data-ko="🎂 생일 파티">🎂 Birthday Parties</div>
-    <div class="catering-chip t" data-en="🎊 Corporate Events"   data-ko="🎊 기업 행사">🎊 Corporate Events</div>
-    <div class="catering-chip t" data-en="⛪ Church Gatherings"  data-ko="⛪ 교회 모임">⛪ Church Gatherings</div>
-    <div class="catering-chip t" data-en="🎫 School Functions"   data-ko="🎫 학교 행사">🎫 School Functions</div>
-    <div class="catering-chip t" data-en="🎳 Game Day Spreads"   data-ko="🎳 게임데이 스프레드">🎳 Game Day Spreads</div>
+    <div class="catering-chip t" data-en="🏢 Office Breakfast"   data-ko="🏢 오피스 아침">🏢 Office Breakfast</div>
+    <div class="catering-chip t" data-en="🎂 Birthday Parties"  data-ko="🎂 생일 파티">🎂 Birthday Parties</div>
+    <div class="catering-chip t" data-en="🎊 Corporate Events"  data-ko="🎊 기업 행사">🎊 Corporate Events</div>
+    <div class="catering-chip t" data-en="⛪ Church Gatherings" data-ko="⛪ 교회 모임">⛪ Church Gatherings</div>
+    <div class="catering-chip t" data-en="🎫 School Functions"  data-ko="🎫 학교 행사">🎫 School Functions</div>
+    <div class="catering-chip t" data-en="🎳 Game Day Spreads"  data-ko="🎳 게임데이 스프레드">🎳 Game Day Spreads</div>
   </div>
 
   <div class="catering-main">
     <p class="t"
        data-en="Need donuts for a crowd? We've got you. Whether it's a dozen boxes for the office or a tower of kolaches for a party, just give us a call and we'll have everything fresh and ready. The more the merrier — we love a big order."
-       data-ko="많은 사람들을 위한 도넛이 필요하신가요? 저희가 도와드리겠습니다. 오피스용 여러 박스든, 파티용 콜라체 탑이든 전화한 통이면 신선하게 준비해 드리겠습니다.">
+       data-ko="많은 사람들을 위한 도넛이 필요하신가요? 저희가 도와드리겠습니다. 오피스용 여러 박스든, 파티용 콜라체 탑이든 전화 한 통이면 신선하게 준비해 드리겠습니다.">
       Need donuts for a crowd? We've got you. Whether it's a dozen boxes for the office or a tower of kolaches for a party, just give us a call and we'll have everything fresh and ready. The more the merrier — we love a big order.
     </p>
     <a href="tel:9402437095" class="catering-cta">
@@ -560,7 +582,7 @@
     </a>
     <p class="catering-note t"
        data-en="(940) 243-7095 · Mon–Fri 5:30am–12pm · Sat–Sun 6am–12pm"
-       data-ko="(940) 243-7095 · 월–금 오전 5시 30분–낙 12시 · 토–일 오전 6시–낙 12시">
+       data-ko="(940) 243-7095 · 월–금 오전 5시 30분–낮 12시 · 토–일 오전 6시–낮 12시">
       (940) 243-7095 &middot; Mon–Fri 5:30am–12pm &middot; Sat–Sun 6am–12pm
     </p>
   </div>
@@ -570,7 +592,7 @@
 <section id="order">
   <p class="sec-eyebrow t" data-en="Can't make it in?" data-ko="방문이 어려우신가요?">Can't make it in?</p>
   <h2 class="sec-title t" data-en="Order Delivery" data-ko="배달 주문">Order Delivery</h2>
-  <div class="sec-divider">🛵</div>
+  <div class="sec-divider" aria-hidden="true">🛵</div>
   <p class="order-sub t"
      data-en="We're on Uber Eats and DoorDash — fresh donuts right to your door."
      data-ko="우버이츠와 도어대시로 신선한 도넛을 문 앞까지 배달해 드립니다.">
@@ -596,7 +618,7 @@
   <div class="foot-brand">Holey Donuts</div>
   <p class="foot-note t"
      data-en="Made with 🍩 & love. Come visit us soon."
-     data-ko="🍩와 사랑으로 만들었습니다. 곣 방문해 주세요.">
+     data-ko="🍩와 사랑으로 만들었습니다. 곧 방문해 주세요.">
     Made with 🍩 & love. Come visit us soon.
   </p>
 </footer>
@@ -629,7 +651,7 @@
         { emoji:"🎂", en:"Birthday Cake",          ko:"생일 케이크",
           descEn:"Raised donut with white icing and colorful sprinkles.",
           descKo:"흰 아이싱과 알록달록 스프링클로 장식한 도넛." },
-        { emoji:"🍬", en:"Cotton Candy",           ko:"솜사탑",
+        { emoji:"🍬", en:"Cotton Candy",           ko:"솜사탕",
           descEn:"Raised donut with berry blue icing and sprinkles.",
           descKo:"베리 블루 아이싱과 스프링클을 올린 도넛." },
         { emoji:"🥥", en:"White Coconut",          ko:"화이트 코코넛",
@@ -695,7 +717,7 @@
           descKo:"햄과 아메리칸 치즈를 버터 크루아상으로 감싼 것." },
         { emoji:"🌯", en:"Breakfast Burrito",        ko:"브렉퍼스트 부리또",
           descEn:"Made in house! Bacon, sausage, egg and cheese in a warm flour tortilla.",
-          descKo:"직접 만든 브리또! 베이컨, 소시지, 달걀, 치즈를 따뜻한 또뉠야에." },
+          descKo:"직접 만든 부리또! 베이컨, 소시지, 달걀, 치즈를 따뜻한 또때야에." },
       ]
     },
     {
@@ -782,7 +804,7 @@
             ? `<div class="mcard-badge">${lang==='ko' ? item.badgeKo : item.badge}</div>` : '';
           return `
             <div class="mcard">
-              <span class="mcard-emoji">${item.emoji}</span>
+              <span class="mcard-emoji" aria-hidden="true">${item.emoji}</span>
               <div class="mcard-name">${name}</div>
               <div class="mcard-desc">${desc}</div>
               ${badge}
@@ -796,6 +818,7 @@
 
   function toggleLang() {
     lang = lang === 'en' ? 'ko' : 'en';
+    document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
     document.getElementById('opt-en').classList.toggle('lang-active', lang === 'en');
     document.getElementById('opt-ko').classList.toggle('lang-active', lang === 'ko');
     document.querySelectorAll('.t').forEach(el => {
