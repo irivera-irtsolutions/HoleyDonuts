@@ -1,7 +1,9 @@
 name: Download Menu Images
 
+
 on:
   workflow_dispatch:
+
 
 jobs:
   download-images:
@@ -34,29 +36,33 @@ jobs:
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/465cc175-62e6-4005-a5e5-013c4e2c92f0-retina-large.jpg" -o images/breakfast-burrito.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/059808f9-0bd9-449a-8ead-c12ef306b233-retina-large.jpg" -o images/pink-lady.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/e3d8eb78-8dee-4827-9793-44b487dccaf3-retina-large.jpg" -o images/birthday-cake.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/d28c7bfb-86bc-4de6-b0f4-65fc42df8b99-retina-large.jpg" -o images/cotton-candy.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/e6c30d6c-d781-404a-bbf6-60e2d03bee32-retina-large.jpg" -o images/white-coconut.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/2bf1c7fb-0bb5-4fa0-96db-e6b78af2f51e-retina-large.jpg" -o images/glazed-old-fashioned.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/6fd0ee50-6829-4706-ada0-f08a0e0f0860-retina-large.jpg" -o images/cinnamon-old-fashioned.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/2fa62d6e-0917-481f-9abf-f8297bb3f2c9-retina-large.jpg" -o images/chocolate-old-fashioned.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/ba2b9ca9-847c-4b12-a34d-3b615bbefa82-retina-large.jpg" -o images/maple-bar.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/ddcbfc51-c798-439e-bd89-31c04cb7151a-retina-large.jpg" -o images/croissant-piggy.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/42d48fab-09aa-44e4-819b-24197edd13f7-retina-large.jpg" -o images/jalapeno-cheddar-kolache.jpg || true
-      - name: Download UberEats images
-        run: |
-          curl -fL "https://d1ralsognjng37.cloudfront.net/d7874916-0278-423d-b939-da2708d61987.jpeg" -o images/large-pig-in-a-blanket.jpg || true
-          curl -fL "https://d1ralsognjng37.cloudfront.net/6458e25d-be3b-4074-b446-7fddcf4a8b73.jpeg" -o images/pig-in-a-blanket.jpg || true
-          curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/glazed-donut-2.jpg || true
-          curl -fL "https://d1ralsognjng37.cloudfront.net/f5ee5a69-c8ff-4e07-a492-790f9de615e6.jpeg" -o images/twist-chocolate.jpg || true
-          curl -fL "https://d1ralsognjng37.cloudfront.net/4c2a4647-f950-47b5-beb1-7daaccf3df9e.jpeg" -o images/chocolate-ue.jpg || true
-          curl -fL "https://d1ralsognjng37.cloudfront.net/89e9bd3f-38e2-4962-9fdf-4e69d014a4b5.jpeg" -o images/jalapeno-cheddar-croissant.jpg || true
-          curl -fL "https://tb-static.uber.com/prod/image-proc/processed_images/e857fb174ff8065a0909bf59f91c4b97/c67fc65e9b4e16a553eb7574fba090f1.jpeg" -o images/sprinkle-donut-holes.jpg || true
-          curl -fL "https://tb-static.uber.com/prod/image-proc/processed_images/113d1de3e33d4fb0177c738e967f1db6/c67fc65e9b4e16a553eb7574fba090f1.jpeg" -o images/ham-and-cheese-croissant.jpg || true
-          curl -fL "https://tb-static.uber.com/prod/image-proc/processed_images/61f3a0e4ead5757e55673db38622e2e6/3093d07d5a810674a6d7adf26679874b.jpeg" -o images/dozen-half-and-half.jpg || true
-      - name: Commit and push images
-        run: |
-          git config user.email "action@github.com"
-          git config user.name "GitHub Action"
-          git add images/
-          git diff --staged --quiet || git commit -m "feat: Add Holey Donuts menu item photos from DoorDash and UberEats"
-          git push
+        - name: Download Drink images
+          run: |
+            # Starbucks Drinks (DoorDash - real product photo)
+            curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photosV2/8aabe22a-4ee8-498e-8c02-c13ee3ab40d8-retina-large.jpeg" -o images/starbucks-drinks.jpg || true
+            # Red Bull (DoorDash - real product photo)
+            curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/d69d85ea-9c8d-4701-af53-96ed744260f3-retina-large-jpeg" -o images/red-bull.jpg || true
+            # Minute Maid Juice / OJ (DoorDash - real product photo)
+            curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photosV2/fe5671d3-556b-49bd-8bb0-4f24a9fdfba1-retina-large.jpg" -o images/minute-maid-juice.jpg || true
+            # Minute Maid Juice Box (DoorDash - same Minute Maid item)
+            curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photosV2/fe5671d3-556b-49bd-8bb0-4f24a9fdfba1-retina-large.jpg" -o images/minute-maid-juice-box.jpg || true
+            # Horizon Chocolate Milk (UberEats - real product photo)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/6458e25d-be3b-4074-b446-7fddcf4a8b73.jpeg" -o images/horizon-chocolate-milk.jpg || true
+            # Monster Energy (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/monster-energy.jpg || true
+            # Milk - Bordens (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/milk.jpg || true
+            # Capri Sun (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/capri-sun.jpg || true
+            # Sunny D (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/sunny-d.jpg || true
+            # Bottle Soda (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/bottle-soda.jpg || true
+            # Soda Can (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/soda-can.jpg || true
+            # Dunkin Iced Coffee (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/dunkin-iced-coffee.jpg || true
+            # Fresh Organic Coffee (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/fresh-organic-coffee.jpg || true
+            # Bottled Water - Ozarka (UberEats - menu image)
+            curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/bottled-water.jpg || true
