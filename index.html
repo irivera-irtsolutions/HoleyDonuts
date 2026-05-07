@@ -272,10 +272,20 @@
       background: var(--card); border: 1.5px dashed var(--border);
       border-radius: 0.75rem; padding: 1.35rem; position: relative;
       transition: transform 0.2s, box-shadow 0.2s;
+      overflow: hidden;
     }
     .mcard:hover {
       transform: translateY(-3px) rotate(-0.3deg);
       box-shadow: 4px 6px 18px rgba(61,31,11,0.08);
+    }
+    .mcard-img {
+      width: calc(100% + 2.7rem);
+      margin: -1.35rem -1.35rem 0.9rem;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1.5px dashed var(--border);
+      background: var(--warm);
     }
     .mcard-emoji { font-size: 2rem; display: block; margin-bottom: 0.6rem; }
     .mcard-name {
@@ -637,58 +647,58 @@
       titleEn: "🍩 Donuts",
       titleKo: "🍩 도넛",
       items: [
-        { emoji:"🍩", en:"Glazed",                ko:"글레이즈",
+        { emoji:"🍩", img:"glazed-donut.jpg", en:"Glazed", ko:"글레이즈",
           descEn:"Classic raised glazed donut — a timeless original.",
           descKo:"클래식 글레이즈 도넛 — 변함없는 오리지널." },
-        { emoji:"🍫", en:"Chocolate",              ko:"초콜릿",
+        { emoji:"🍫", img:"chocolate-donut.jpg", en:"Chocolate", ko:"초콜릿",
           descEn:"Classic chocolate iced donut.",
           descKo:"클래식 초콜릿 아이싱 도넛." },
-        { emoji:"🍫✨", en:"Chocolate Sprinkles",  ko:"초콜릿 스프링클",
+        { emoji:"🍫✨", img:"chocolate-sprinkles-donut.jpg", en:"Chocolate Sprinkles", ko:"초콜릿 스프링클",
           descEn:"Classic chocolate iced donut splashed with rainbow sprinkles.",
           descKo:"초콜릿 아이싱에 스프링클을 뿌린 도넛." },
-        { emoji:"🍓", en:"Pink Lady",              ko:"핑크 레이디",
+        { emoji:"🍓", en:"Pink Lady", ko:"핑크 레이디",
           descEn:"Raised donut with strawberry icing and sprinkles.",
           descKo:"딸기 아이싱과 스프링클을 올린 도넛." },
-        { emoji:"🎂", en:"Birthday Cake",          ko:"생일 케이크",
+        { emoji:"🎂", en:"Birthday Cake", ko:"생일 케이크",
           descEn:"Raised donut with white icing and colorful sprinkles.",
           descKo:"흰 아이싱과 알록달록 스프링클로 장식한 도넛." },
-        { emoji:"🍬", en:"Cotton Candy",           ko:"솜사탕",
+        { emoji:"🍬", en:"Cotton Candy", ko:"솜사탕",
           descEn:"Raised donut with berry blue icing and sprinkles.",
           descKo:"베리 블루 아이싱과 스프링클을 올린 도넛." },
-        { emoji:"🥥", en:"White Coconut",          ko:"화이트 코코넛",
+        { emoji:"🥥", en:"White Coconut", ko:"화이트 코코넛",
           descEn:"Raised donut with white icing and shaved coconut.",
           descKo:"흰 아이싱과 코코넛 슬라이스를 올린 도넛." },
-        { emoji:"🥣", en:"Cereal Donut",           ko:"시리얼 도넛",
+        { emoji:"🥣", img:"cereal-donut.jpg", en:"Cereal Donut", ko:"시리얼 도넛",
           descEn:"Raised donut with white icing topped with Fruity Pebbles cereal.",
           descKo:"흰 아이싱 위에 과일 시리얼을 올린 도넛." },
-        { emoji:"✨", en:"Glazed Old Fashioned",   ko:"글레이즈 올드패션",
+        { emoji:"✨", en:"Glazed Old Fashioned", ko:"글레이즈 올드패션",
           descEn:"Cake donut fried and cracked open, then glazed.",
           descKo:"튀겨서 갈라진 케이크 도넛에 글레이즈를 입힌 것." },
         { emoji:"🍂", en:"Cinnamon Old Fashioned", ko:"시나몬 올드패션",
           descEn:"Cake donut cracked open, dusted with cinnamon, then glazed.",
           descKo:"시나몬을 뿌리고 글레이즈를 입힌 올드패션 도넛." },
-        { emoji:"🍫", en:"Chocolate Old Fashioned",ko:"초콜릿 올드패션",
+        { emoji:"🍫", en:"Chocolate Old Fashioned", ko:"초콜릿 올드패션",
           descEn:"Cake donut fried and cracked open, then dipped in chocolate.",
           descKo:"초콜릿에 담근 올드패션 케이크 도넛." },
-        { emoji:"🍁", en:"Maple Bar",              ko:"메이플 바",
+        { emoji:"🍁", en:"Maple Bar", ko:"메이플 바",
           descEn:"Long john with sweet maple icing.",
           descKo:"메이플 아이싱을 올린 롱 존 도넛." },
-        { emoji:"🍫", en:"Éclair",                 ko:"에클레어",
+        { emoji:"🍫", img:"eclair.jpg", en:"Éclair", ko:"에클레어",
           descEn:"Long john dipped in chocolate.",
           descKo:"초콜릿에 담근 롱 존 도넛." },
-        { emoji:"🥐", en:"Cronut",                 ko:"크로넛",
+        { emoji:"🥐", img:"cronut.jpg", en:"Cronut", ko:"크로넛",
           descEn:"A flaky croissant-donut hybrid in chocolate, glazed, or cinnamon sugar.",
           descKo:"초콜릿, 글레이즈, 또는 시나몬 슈가 크루아상-도넛 하이브리드." },
-        { emoji:"🫐", en:"Filled Donuts",          ko:"필드 도넛",
+        { emoji:"🫐", img:"filled-donuts.jpg", en:"Filled Donuts", ko:"필드 도넛",
           descEn:"Round glazed donuts filled with raspberry, Bavarian cream, or lemon.",
           descKo:"라즈베리, 바바리안 크림, 또는 레몬이 가득 찬 글레이즈 도넛." },
-        { emoji:"🍩", en:"Donut Holes",            ko:"도넛 홀",
+        { emoji:"🍩", img:"donut-holes.jpg", en:"Donut Holes", ko:"도넛 홀",
           descEn:"Sweet and fluffy little balls of joy.",
           descKo:"달콤하고 폭신한 작은 도넛 조각." },
-        { emoji:"🍫", en:"Chocolate Donut Holes",  ko:"초콜릿 도넛 홀",
+        { emoji:"🍫", img:"chocolate-donut-holes.jpg", en:"Chocolate Donut Holes", ko:"초콜릿 도넛 홀",
           descEn:"Donut holes dipped in chocolate — 4 clusters of 3.",
           descKo:"초콜릿에 담근 도넛 홀 — 3개씩 4묶음." },
-        { emoji:"🥓", en:"Maple Bacon",            ko:"메이플 베이컨",
+        { emoji:"🥓", img:"maple-bacon.jpg", en:"Maple Bacon", ko:"메이플 베이컨",
           badge:"Sat & Sun Only", badgeKo:"토·일 한정",
           descEn:"Maple bar topped with 2 strips of crispy bacon.",
           descKo:"바삭한 베이컨 2줄을 올린 메이플 바." },
@@ -698,25 +708,25 @@
       titleEn: "🌶️ Savory",
       titleKo: "🌶️ 세이보리",
       items: [
-        { emoji:"🌭", en:"Little Piggies (Kolaches)", ko:"리틀 피기 (콜라체)",
+        { emoji:"🌭", img:"pig-in-a-blanket.jpg", en:"Little Piggies (Kolaches)", ko:"리틀 피기 (콜라체)",
           descEn:"Smoky cheesy sausage links wrapped in delicious donut dough, baked to perfection.",
           descKo:"훈제 치즈 소시지를 도넛 반죽으로 감싸 구운 것." },
-        { emoji:"🧀", en:"Jumbo Cheddar",           ko:"점보 체다",
+        { emoji:"🧀", img:"jumbo-cheddar-kolache.jpg", en:"Jumbo Cheddar", ko:"점보 체다",
           descEn:"Big cheddar sausage wrapped in donut dough, baked golden brown.",
           descKo:"큼직한 체다 소시지를 도넛 반죽으로 감싸 황금빛으로 구운 것." },
-        { emoji:"🌶️", en:"Jalapeño Cheddar",        ko:"할라피뇨 체다",
+        { emoji:"🌶️", en:"Jalapeño Cheddar", ko:"할라피뇨 체다",
           descEn:"Big jalapeño cheddar sausage wrapped in donut dough, baked golden brown.",
           descKo:"할라피뇨 체다 소시지를 도넛 반죽으로 감싸 구운 것." },
-        { emoji:"🥐", en:"Croissant Piggy",         ko:"크루아상 피기",
+        { emoji:"🥐", en:"Croissant Piggy", ko:"크루아상 피기",
           descEn:"The little piggy, but wrapped in a buttery flaky croissant.",
           descKo:"버터 크루아상으로 감싼 피기." },
-        { emoji:"🥐", en:"Jalapeño Croissant",      ko:"할라피뇨 크루아상",
+        { emoji:"🥐", img:"jalapeno-cheddar-croissant.jpg", en:"Jalapeño Croissant", ko:"할라피뇨 크루아상",
           descEn:"Jalapeño cheddar sausage wrapped in a buttery flaky croissant.",
           descKo:"할라피뇨 체다 소시지를 버터 크루아상으로 감싼 것." },
-        { emoji:"🥐", en:"Ham & Cheese Croissant",  ko:"햄 치즈 크루아상",
+        { emoji:"🥐", en:"Ham & Cheese Croissant", ko:"햄 치즈 크루아상",
           descEn:"Ham and American cheese wrapped in a buttery flaky croissant.",
           descKo:"햄과 아메리칸 치즈를 버터 크루아상으로 감싼 것." },
-        { emoji:"🌯", en:"Breakfast Burrito",        ko:"브렉퍼스트 부리또",
+        { emoji:"🌯", img:"breakfast-burrito.jpg", en:"Breakfast Burrito", ko:"브렉퍼스트 부리또",
           descEn:"Made in house! Bacon, sausage, egg and cheese in a warm flour tortilla.",
           descKo:"직접 만든 부리또! 베이컨, 소시지, 달걀, 치즈를 따뜻한 또때야에." },
       ]
@@ -725,19 +735,19 @@
       titleEn: "📦 Value Packs",
       titleKo: "📦 대용량 패키지",
       items: [
-        { emoji:"🍩", en:"Dozen Glazed",            ko:"글레이즈 12개",
+        { emoji:"🍩", img:"glazed-donut-2.jpg", en:"Dozen Glazed", ko:"글레이즈 12개",
           descEn:"A box of 12 glazed donuts.",
           descKo:"글레이즈 도넛 12개 박스." },
-        { emoji:"🍫", en:"Dozen Chocolate",         ko:"초콜릿 12개",
+        { emoji:"🍫", img:"chocolate-ue.jpg", en:"Dozen Chocolate", ko:"초콜릿 12개",
           descEn:"A box of 12 chocolate donuts.",
           descKo:"초콜릿 도넛 12개 박스." },
-        { emoji:"🔀", en:"Dozen Half & Half",       ko:"반반 12개",
+        { emoji:"🔀", en:"Dozen Half & Half", ko:"반반 12개",
           descEn:"6 glazed and 6 chocolate donuts.",
           descKo:"글레이즈 6개 + 초콜릿 6개." },
-        { emoji:"🎉", en:"Dozen Mixed",             ko:"믹스 12개",
+        { emoji:"🎉", img:"dozen-mixed.jpg", en:"Dozen Mixed", ko:"믹스 12개",
           descEn:"3 glazed, 3 chocolate, and a mix of cake, colors, sprinkles & minis.",
           descKo:"글레이즈 3개, 초콜릿 3개, 그리고 케이크·컬러·스프링클 믹스." },
-        { emoji:"🌭", en:"Dozen Piggies",           ko:"피기 12개",
+        { emoji:"🌭", img:"large-pig-in-a-blanket.jpg", en:"Dozen Piggies", ko:"피기 12개",
           descEn:"A box of 12 pigs in a blanket (kolaches).",
           descKo:"콜라체 12개 박스." },
       ]
@@ -746,46 +756,46 @@
       titleEn: "☕ Drinks",
       titleKo: "☕ 음료",
       items: [
-        { emoji:"☕", en:"Fresh Organic Coffee",    ko:"유기농 원두 커피",
+        { emoji:"☕", en:"Fresh Organic Coffee", ko:"유기농 원두 커피",
           descEn:"Locally roasted by Denton's West Oak Coffee, ground fresh and brewed right here.",
           descKo:"덴턴의 웨스트 오크 커피에서 로스팅한 신선한 원두로 내린 커피." },
-        { emoji:"🧋", en:"Starbucks Drinks",        ko:"스타벅스 음료",
+        { emoji:"🧋", en:"Starbucks Drinks", ko:"스타벅스 음료",
           descEn:"Made with signature espresso coffee.",
           descKo:"시그니처 에스프레소로 만든 음료." },
-        { emoji:"🧋", en:"Dunkin' Iced Coffee",     ko:"던킨 아이스 커피",
+        { emoji:"🧋", en:"Dunkin' Iced Coffee", ko:"던킨 아이스 커피",
           descEn:"Brewed coffee served over ice.",
           descKo:"얼음 위에 부은 브루잉 커피." },
-        { emoji:"🍊", en:"Minute Maid Juice",       ko:"미닛 메이드 주스",
+        { emoji:"🍊", en:"Minute Maid Juice", ko:"미닛 메이드 주스",
           descEn:"100% pure squeezed pasteurized orange juice.",
           descKo:"100% 순수 착즙 오렌지 주스." },
-        { emoji:"🥛", en:"Milk",                    ko:"우유",
+        { emoji:"🥛", en:"Milk", ko:"우유",
           descEn:"Borden's dairy best.",
           descKo:"보든 유제품의 최고." },
-        { emoji:"🍫", en:"Horizon Chocolate Milk",  ko:"초콜릿 우유",
+        { emoji:"🍫", en:"Horizon Chocolate Milk", ko:"초콜릿 우유",
           descEn:"Organic chocolate milk in a box.",
           descKo:"유기농 초콜릿 우유 박스." },
-        { emoji:"🧃", en:"Capri Sun",               ko:"카프리선",
+        { emoji:"🧃", en:"Capri Sun", ko:"카프리선",
           descEn:"Refreshing fruit juice blend in a pouch.",
           descKo:"상큼한 과일 주스 파우치." },
-        { emoji:"🧃", en:"Sunny D",                 ko:"써니디",
+        { emoji:"🥤", en:"Sunny D", ko:"써니디",
           descEn:"Sport cap citrus drink.",
           descKo:"스포츠 캡 감귤 음료." },
-        { emoji:"🧃", en:"Minute Maid Juice Box",   ko:"미닛 메이드 주스 박스",
+        { emoji:"🧃", en:"Minute Maid Juice Box", ko:"미닛 메이드 주스 박스",
           descEn:"Kid's juice box.",
           descKo:"어린이용 주스 박스." },
-        { emoji:"🥤", en:"Bottle Soda",             ko:"탄산음료 (병)",
+        { emoji:"🥤", en:"Bottle Soda", ko:"탄산음료 (병)",
           descEn:"20oz bottle.",
           descKo:"20온스 병." },
-        { emoji:"🥤", en:"Soda Can",                ko:"탄산음료 (캔)",
+        { emoji:"🥤", en:"Soda Can", ko:"탄산음료 (캔)",
           descEn:"12oz can.",
           descKo:"12온스 캔." },
-        { emoji:"🧉", en:"Monster Energy",          ko:"몬스터 에너지",
+        { emoji:"🧉", en:"Monster Energy", ko:"몬스터 에너지",
           descEn:"Green, White, Mango Loco, Khaotic, Pacific Punch, and more.",
           descKo:"그린, 화이트, 망고 로코, 카오틱, 퍼시픽 펀치 등." },
-        { emoji:"🐂", en:"Red Bull",                ko:"레드불",
+        { emoji:"🐂", en:"Red Bull", ko:"레드불",
           descEn:"Energy drink.",
           descKo:"에너지 드링크." },
-        { emoji:"💧", en:"Bottled Water",           ko:"생수",
+        { emoji:"💧", en:"Bottled Water", ko:"생수",
           descEn:"Ozarka 20oz.",
           descKo:"오자르카 20온스." },
       ]
@@ -801,11 +811,14 @@
         const cards = section.items.map(item => {
           const name  = lang === 'ko' ? item.ko     : item.en;
           const desc  = lang === 'ko' ? item.descKo : item.descEn;
+          const visual = item.img
+            ? `<img class="mcard-img" src="images/${item.img}" alt="${name}" loading="lazy">`
+            : `<span class="mcard-emoji" aria-hidden="true">${item.emoji}</span>`;
           const badge = item.badge
             ? `<div class="mcard-badge">${lang==='ko' ? item.badgeKo : item.badge}</div>` : '';
           return `
             <div class="mcard">
-              <span class="mcard-emoji" aria-hidden="true">${item.emoji}</span>
+              ${visual}
               <div class="mcard-name">${name}</div>
               <div class="mcard-desc">${desc}</div>
               ${badge}
