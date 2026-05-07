@@ -19,7 +19,6 @@ jobs:
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/54ebd6b7-01d0-45fc-8a54-7cc022753845-retina-large.jpg" -o images/chocolate-sprinkled-donut-holes.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/ab8d3acf-c3d9-4dd3-a798-6669f3494be9-retina-large.jpg" -o images/twist.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photosV2/7f054d7b-a9ab-4a30-af12-413feafae7c8-retina-large.jpeg" -o images/cronut.jpg || true
-          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/ba2b9ca9-847c-4b12-a34d-3b615bbefa82-retina-large.jpg" -o images/eclair.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/07fceefc-a3d7-4c88-aa21-770a328fde6e-retina-large.jpg" -o images/filled-donuts.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/f6113840-8467-46c1-830c-eb68ea59a2e1-retina-large.jpg" -o images/apple-fritter.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/f8f1759f-512d-4992-b954-c9286f0f1dfa-retina-large.jpg" -o images/chocolate-donut.jpg || true
@@ -33,6 +32,16 @@ jobs:
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/ugc/bf99a019-3185-48da-b281-15a104e91fea.jpg" -o images/kolache.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/ugc/56055fbc-f50a-45ef-85b7-725768b6a5ae.png" -o images/dozen-mixed.jpg || true
           curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/465cc175-62e6-4005-a5e5-013c4e2c92f0-retina-large.jpg" -o images/breakfast-burrito.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/059808f9-0bd9-449a-8ead-c12ef306b233-retina-large.jpg" -o images/pink-lady.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/e3d8eb78-8dee-4827-9793-44b487dccaf3-retina-large.jpg" -o images/birthday-cake.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/d28c7bfb-86bc-4de6-b0f4-65fc42df8b99-retina-large.jpg" -o images/cotton-candy.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/e6c30d6c-d781-404a-bbf6-60e2d03bee32-retina-large.jpg" -o images/white-coconut.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/2bf1c7fb-0bb5-4fa0-96db-e6b78af2f51e-retina-large.jpg" -o images/glazed-old-fashioned.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/6fd0ee50-6829-4706-ada0-f08a0e0f0860-retina-large.jpg" -o images/cinnamon-old-fashioned.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/2fa62d6e-0917-481f-9abf-f8297bb3f2c9-retina-large.jpg" -o images/chocolate-old-fashioned.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/ba2b9ca9-847c-4b12-a34d-3b615bbefa82-retina-large.jpg" -o images/maple-bar.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/ddcbfc51-c798-439e-bd89-31c04cb7151a-retina-large.jpg" -o images/croissant-piggy.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/42d48fab-09aa-44e4-819b-24197edd13f7-retina-large.jpg" -o images/jalapeno-cheddar-kolache.jpg || true
       - name: Download UberEats images
         run: |
           curl -fL "https://d1ralsognjng37.cloudfront.net/d7874916-0278-423d-b939-da2708d61987.jpeg" -o images/large-pig-in-a-blanket.jpg || true
@@ -42,6 +51,8 @@ jobs:
           curl -fL "https://d1ralsognjng37.cloudfront.net/4c2a4647-f950-47b5-beb1-7daaccf3df9e.jpeg" -o images/chocolate-ue.jpg || true
           curl -fL "https://d1ralsognjng37.cloudfront.net/89e9bd3f-38e2-4962-9fdf-4e69d014a4b5.jpeg" -o images/jalapeno-cheddar-croissant.jpg || true
           curl -fL "https://tb-static.uber.com/prod/image-proc/processed_images/e857fb174ff8065a0909bf59f91c4b97/c67fc65e9b4e16a553eb7574fba090f1.jpeg" -o images/sprinkle-donut-holes.jpg || true
+          curl -fL "https://tb-static.uber.com/prod/image-proc/processed_images/113d1de3e33d4fb0177c738e967f1db6/c67fc65e9b4e16a553eb7574fba090f1.jpeg" -o images/ham-and-cheese-croissant.jpg || true
+          curl -fL "https://tb-static.uber.com/prod/image-proc/processed_images/61f3a0e4ead5757e55673db38622e2e6/3093d07d5a810674a6d7adf26679874b.jpeg" -o images/dozen-half-and-half.jpg || true
       - name: Commit and push images
         run: |
           git config user.email "action@github.com"
