@@ -1,0 +1,51 @@
+name: Download Menu Images
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download-images:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create images directory
+        run: mkdir -p images
+      - name: Download DoorDash images
+        run: |
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/40482782-ed71-4213-acf9-50d1edd61154-retina-large.jpg" -o images/donut-holes.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/dfe27013-6b77-4ea2-801a-5790596a8d7b-retina-large.jpg" -o images/chocolate-donut-holes.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/54ebd6b7-01d0-45fc-8a54-7cc022753845-retina-large.jpg" -o images/chocolate-sprinkled-donut-holes.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/ab8d3acf-c3d9-4dd3-a798-6669f3494be9-retina-large.jpg" -o images/twist.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photosV2/7f054d7b-a9ab-4a30-af12-413feafae7c8-retina-large.jpeg" -o images/cronut.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/ba2b9ca9-847c-4b12-a34d-3b615bbefa82-retina-large.jpg" -o images/eclair.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/07fceefc-a3d7-4c88-aa21-770a328fde6e-retina-large.jpg" -o images/filled-donuts.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/f6113840-8467-46c1-830c-eb68ea59a2e1-retina-large.jpg" -o images/apple-fritter.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/f8f1759f-512d-4992-b954-c9286f0f1dfa-retina-large.jpg" -o images/chocolate-donut.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/28f42c07-6b18-41d3-b7f3-0d7e2c7d31c9-retina-large.jpg" -o images/blueberry-cake-donut.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/99736ce6-b88a-4230-8e56-c2d029ecb1b0-retina-large.jpg" -o images/glazed-donut.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/653d239a-c111-43d4-ad58-18dc0821650c-retina-large.jpg" -o images/cinnamon-roll.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/47033470-fe21-4e55-8616-4c55f010e00f-retina-large.jpg" -o images/chocolate-sprinkles-donut.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/d5af0d7f-d48a-40c2-94cf-a6138ed696cb-retina-large.jpg" -o images/maple-bacon.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/2de82b55-a26e-4e55-8f85-36dc69f61539-retina-large.jpg" -o images/cereal-donut.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/5e8be885-cf97-4274-bdcb-cf8adde627c1-retina-large.jpg" -o images/jumbo-cheddar-kolache.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/ugc/bf99a019-3185-48da-b281-15a104e91fea.jpg" -o images/kolache.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/ugc/56055fbc-f50a-45ef-85b7-725768b6a5ae.png" -o images/dozen-mixed.jpg || true
+          curl -fL "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photos/465cc175-62e6-4005-a5e5-013c4e2c92f0-retina-large.jpg" -o images/breakfast-burrito.jpg || true
+      - name: Download UberEats images
+        run: |
+          curl -fL "https://d1ralsognjng37.cloudfront.net/d7874916-0278-423d-b939-da2708d61987.jpeg" -o images/large-pig-in-a-blanket.jpg || true
+          curl -fL "https://d1ralsognjng37.cloudfront.net/6458e25d-be3b-4074-b446-7fddcf4a8b73.jpeg" -o images/pig-in-a-blanket.jpg || true
+          curl -fL "https://d1ralsognjng37.cloudfront.net/4165ecce-68ac-43a9-8cf4-c0ff0f0642e2.jpeg" -o images/glazed-donut-2.jpg || true
+          curl -fL "https://d1ralsognjng37.cloudfront.net/f5ee5a69-c8ff-4e07-a492-790f9de615e6.jpeg" -o images/twist-chocolate.jpg || true
+          curl -fL "https://d1ralsognjng37.cloudfront.net/4c2a4647-f950-47b5-beb1-7daaccf3df9e.jpeg" -o images/chocolate-ue.jpg || true
+          curl -fL "https://d1ralsognjng37.cloudfront.net/89e9bd3f-38e2-4962-9fdf-4e69d014a4b5.jpeg" -o images/jalapeno-cheddar-croissant.jpg || true
+          curl -fL "https://tb-static.uber.com/prod/image-proc/processed_images/e857fb174ff8065a0909bf59f91c4b97/c67fc65e9b4e16a553eb7574fba090f1.jpeg" -o images/sprinkle-donut-holes.jpg || true
+      - name: Commit and push images
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add images/
+          git diff --staged --quiet || git commit -m "feat: Add Holey Donuts menu item photos from DoorDash and UberEats"
+          git push
